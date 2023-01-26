@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록태그</title>
+</head>
+<body>
+    <h2>프론트엔드 학습 순서</h2>
+    <ol> <!--순서 있는 목록 (<ol reversed> 는 역순)
+                            <ol reversed="reversed">속성이름과 값이 같으면 값은 생략 가능하다.-->
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jquery</li>
+        <li>react</li>
+    </ol>
+    <h2>주간작업(화)</h2>
+    <ol start="4"> <!-- start는 시작 순서를 정함-->
+        <li>내부청소</li>
+        <li>운반작업</li>
+        <li>연결작업</li>
+    </ol>
+    <hr> <!--구분선-->
+    <h2>1박 2일 가족 여행 코스</h2>
+    <ul>
+         <li>1일차</li> <!--<ul>안에 <li> 에도 <ol>이 올 수 있음 -->
+            <ol type="a"> <!--type은 순서 표시 타입을 정함-->
+                <li>해녀박물관</li>
+                <li>낚시체험</li>
+            </ol>
+         <li>2일차</li>
+            <ol type="a">
+                <li>용눈이오름</li>
+                <li>만장굴</li>
+                <li>카약체험</li>
+            </ol>
+    </ul>
+</body>
+</html>
