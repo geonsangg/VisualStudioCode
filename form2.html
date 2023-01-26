@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 관련 태그들</title>
+</head>
+<body>
+    <form>
+        <p>
+            <label>이름</label>
+            <input type="text" value="홍길동" readonly> <!--readonly = 읽기전용-->
+            <input type="hidden" name="code" value="1234"> <!--hidden = 실제로 보이진 않지만 서버에 보내야 하는 정보들.예시)회원등급~?(클라이언트들한테 보이지 않음)-->
+        </p>
+            <!--checkbox, radio = value의 값이 name의 값으로 들어가서 서버에 전달된다.-->
+        <h3>좋아하는 스포츠종목은?(다중선택가능)</h3>
+        <p>  <!-- checkbox = name의 값이 달라야한다.-->
+            <input type="checkbox" name="sports1" value="football">축구 
+            <input type="checkbox" name="sports2" value="baseball">야구
+            <input type="checkbox" name="sports3" value="volleyball">배구
+        </p> <!-- radio = name의 값이 같아야한다.-->
+        <h3>여름방학 특강- 수강할 과목을 선택하세요(1과목만 선택가능)</h3>   <!--label로 영어,라디오를 다 묶었기에 영어만 눌러도 체크가 된다.-->
+        <label><input type="radio" name="subject" value="eng" checked>영어</label> <!--checked = 실행했을 때 먼저 체크가 되어있다.-->
+        <label><input type="radio" name="subject" value="ch">중국어</label>
+        <label><input type="radio" name="subject" value="jp">일어</label>
+        <p>
+            <label>주소</label>
+            <input type="text" name="address" size="50"> <!--size = input의 보여지는 크기-->
+        </p>
+    </form>
+</body>
+</html>
