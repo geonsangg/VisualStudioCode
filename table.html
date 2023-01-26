@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 요소</title>
+</head>
+<body>
+    <figure>
+        <figcaption>
+            <p>비상연락망</p> <!--표의 제목 넣기-->
+        </figcaption>
+        <table border="1"> <!--tr은 행, td는 열, th는 테이블 제목-->
+                <!--figure를 사용 안하고 <caption> 으로도 표의 제목을 넣을 수 있음-->
+                <tr>
+                    <th>이름</th><th>전화번호</th><th>주소</th><th>나이</th>
+                </tr>
+                <tr>
+                    <td>이건상</td><td>010-8212-3228</td><td rowspan="2">의정부</td><td>27</td>
+                </tr>                                  <!--<td rowspan=""> = 밑에 행과 합치기 -->
+                <tr>
+                    <td>송이</td><td>010-1234-5678</td><td>5</td>
+                </tr>
+                <tr>
+                    <td>헤리</td><td>010-8765-4321</td><td>강진</td><td>19</td>
+                </tr>
+                <tr>
+                    <td colspan="4">오늘은 목요일</td> <!-- colspan = 열 합치기-->
+                </tr>
+        </table>
+    </figure>
+    <table border="1">
+        <caption>주간식단표</caption>
+        <thead>  <!--table 내용이 복잡할 때 쉽게 구분하기 위해 제목 thead, 내용 tbody, 요약tfoot으로 구분해준다. -->
+            <tr>
+                <th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>비고</th>
+            </tr>
+        </thead>
+        <tbody>   
+            <tr>
+                <td>아침</td><td>김치찌개</td><td>된장찌개</td><td rowspan="3">한식뷔페</td><td>순두부찌개</td><td>백반정식</td><td rowspan="3">시간엄수</td>
+            </tr>
+            <tr>
+                <td>점심</td><td>칼국수</td><td>비빔밥</td><td colspan="2">라면</td>
+            </tr>
+            <tr>
+                <td>저녁</td><td>순대국</td><td>콩나물국</td><td>부대찌개</td><td>카레덮밥</td>
+            </tr>
+        </tbody>
+        <tfoot>   
+            <tr>
+                <td colspan="7">※ 배식 시간은 수요일을 제외하고 1시간 입니다.</td>
+            </tr>
+        </tfoot>    
+    </table>
+</body>
+</html>
