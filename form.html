@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 관련 태그들</title>
+</head>
+<body>
+    <!--action = form을 전송할 서버(전송되는 서버 url 또는 html 링크) 
+        method = 전송 방식 (get = 담고 있는 값이 노출 , post = 담고 있는 값이 노출 되지 않음)
+        input =  사용자가 정보를 입력하는 부분을 만들어야 할 때 사용한다.
+        type = 텍스트입력창인지 이메일, 전화번호 양식 혹은 파일첨부, 동영상 첨부 인지 구분하기 위해 사용된다.
+        name = 서버에 전달할 값을 저장
+        submit = 서버전송 버튼 (value = sumbit의 이름)
+        -->
+    
+    
+    <form action="search.jsp" method="get"> 
+        <input type="search" name="search"> 
+        <input type="submit" value="검색"> 
+    </form>
+    <form action="member.jsp" method="post" autocomplete="off"> 
+        <fieldset> <!-- 안에 내용을 묶어주는 태그-->
+            <legend>회원가입</legend> <!-- 묶어준 그룹의 이름을 정하는 태그-->
+            <p> 
+                <label for="name">이름</label> <!--for = label은 포커스를 가질 수 없기에 for로 지정해둔 값을 아이디로 가지는 input에 포커스를 가게함.-->
+                <input type="text" id="name" name="name" maxlength="10" placeholder="예)홍길동"> <!--id를 주는 이유는 css로 제어하기 위해-->
+            </p>                <!--maxlength = 입력할 수 있는 길이 제한, placeholder = 검색 창 안에 힌트를 보여준다.(글자를 입력하면 알아서 사라짐)-->       
+            <p>
+                <label for="id">아이디</label>
+                <input type="text" id="id" name="id" maxlength="15"> 
+            </p>
+            <p>
+                <label for="pass">비밀번호</label>
+                <input type="password" id="pass" name="pass"> <!--password 타입은 ******처럼 보임-->
+            </p>
+        </fieldset>
+        <input type="submit" value="회원등록">  <!--submit = 서버전송 버튼 (value = sumbit의 이름)-->
+        <input type="reset" value="다시입력"> <!--reset은 입력된 값을 다 지워준다-->
+    </form>
+</body>
+</html>
