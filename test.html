@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱테그</title>
+    <!--블럭레벨요소 width = 화면전체 height = 자기자신만 차지
+    인라인레벨요소 width, height 둘다 자기 자신만 차지-->
+    <!--div태그 = 블럭레벨요소로 영역을 묶기만 하는 태그
+        span = 인라인레벨로 작은 영역을 묶는 태그-->
+</head>
+<body>
+    <!--머리말 영역(제목, 내비게이션, 검색, 메뉴 등등)-->
+    <header><!--대부분의 홈페이지 로고엔 엥커가 걸려있다./ 제일 처음 뜨는 화면은 index.html로 만드는게 통상적이다.--> 
+        <h1><a href="#">반려동물</a></h1>
+        <nav> <!--메뉴같은 태그-->
+            <ul>
+                <li><a href="#">애완견 종류</a></li>  <!--단축키 ul>li*4>a -->
+                <li><a href="#">입양하기</a></li>
+                <li><a href="#">건강돌보기</a></li>
+                <li><a href="#">더불어살기</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--주요 내용(컨텐츠) 영역-->
+    <div id="contents">
+        <section> <!--주제별 컨텐츠 영역 나타내기-->
+            <h2>활달한 강아지</h2>
+            <h3>요크셔 테리어</h3>
+            <p>생기 있고 활달한 성질을 가지고 있으며 귀엽고 귀여워어어~~~~~~</p>
+            <h3>말티즈</h3>
+            <p>애정이 많고, 충실하며 활달한 성질을 가지고 있으며 귀여워~~~~~~~</p>
+        </section>
+        <section>
+            <h2>온순한 강아지</h2>
+            <h3>쉬즈</h3>
+            <p>얼굴에서 풍기는 모습처럼 온순하고 쉽게 친숙해지며 귀여워~~~~~~~</p>
+            <h3>퍼그</h3>
+            <p>매우 사려가 깊고 사랑스러운 견종이며 귀여워~~~~~~</p>
+        </section>
+        <article> <!--주요 컨텐츠와 독립적으로 기사나 블로그포스팅 같은 것-->
+            <h2>주요 기사</h2>
+            <p>유기견들을 관리하는 곳에서~~~~~</p>
+        </article>
+        <aside><!--광고같은 사이드에 나오는 것-->
+            <h2>사료 광고</h2>
+            <p>유기농 사료 2+1 !</p>
+        </aside>
+    </div>
+    <!--꼬리말 영역(제작정보, 저작권정보, 전화번호, 주소, 이메일 등등)-->
+    <footer>
+        <address>경기도 의정부시 민락동 031)823-0000 pet@cute.com</address>
+        <p>COPYRIGHT &copy; All rights reserved.</p>
+    </footer>
+</body>
+</html>
