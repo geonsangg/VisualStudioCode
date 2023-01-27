@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멀티미디어</title>
+</head>
+<!--autoplay(브라우저 실행시 바로 재생) muted(autoplay시 음소거로 시작) loop(반복재생)
+   하지만 요즘은 웹접근성으로 거의 사용하지 않고 autoplay는 요즘 브라우저에서는 적용조차 되지않는다.-->
+<body> <!--audio태그는 html같은 요소에 음악을 삽입하는 태그-->
+    <audio controls><!--controls = 재생,정지등(넣지 않으면 웹접근성 법률에 걸린다)-->
+        <source src="media/da.mp3" type="audio/mp3">
+        <source src="media/da.ogg" type="audio/ogg"> <!--mp3를 지원하지 않는 브라우저에서는 ogg가 실행된다-->
+    </audio>
+    <video controls poster="images/watch.jpg" width="500"><!--동영상을 삽입할 때 쓰는 태그-->
+        <!--poster = 동영상이 재생되기 전에 보이는 이미지-->
+        <source src="media/cross.mp4" type="video/mp4">
+        <source src="media/cross.mp4" type="video/webm">
+        <source src="media/cross.mp4" type="video/ogv">
+    </video>
+</body>
+</html>
