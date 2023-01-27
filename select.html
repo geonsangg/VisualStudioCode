@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택 요소</title>
+    <!--style = css, textarea의 스타일을 정한다. resize=사이즈변경 : none 안한다.-->
+    <style> 
+        textarea{
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>여름방학 특강 신청</h2>
+        <fieldset>
+            <legend>수강신청인</legend>
+            <p>
+                <label for="classNum">학번</label>
+                <input type="text" name="classNum" id="classNum">
+            </p>
+            <p>
+                <label for="name">성명</label>
+                <input type="text" name="name" id="name">
+            </p>
+            <p>
+                <label>학과</label>
+                <!--select = 주로 범위가 정해진 것중 오타가 날 수 있는 것에 사용을한다.-->
+                <select name="class"> <!--selcet의 자식은 option-->
+                    <option value="archi">건축공학과</option> <!--처음 실행하면 제일 위에있는 옵션이 나와있다-->
+                    <option value="mechanic" selected>기계공학과</option> <!--하지만 selected를 사용하면 selected가 제일 먼저 나온다.-->
+                    <option value="indust">산업공학과</option>
+                    <option value="elec">전기전자공학과</option>
+                    <option value="computer">컴퓨터 공학과</option>
+                    <option value="chemical">화학공학과</option>
+                </select>
+            </p>
+
+            <p>
+                <label>학과</label>  <!--2개이상을 선택하게 하고 싶으면 multiple을 사용한다. Cntl,shift로 다중선택 가능-->
+                <select name="class" size="5" multiple> <!--size를 주면 화면에 보이는 옵션에 개수를 정할 수 있다.-->
+                    <option value="archi">건축공학과</option> 
+                    <option value="mechanic">기계공학과</option> 
+                    <option value="indust">산업공학과</option>
+                    <option value="elec">전기전자공학과</option>
+                    <option value="computer">컴퓨터 공학과</option>
+                    <option value="chemical">화학공학과</option>
+                </select>
+            </p>
+
+            <p>
+                <label>학과</label> 
+                <select name="class">
+                    <optgroup label="공과대학"> <!--optgroup은 옵션을 묶어줄 때 사용 그룹은 선택안됨-->
+                        <option value="archi">건축공학과</option> 
+                        <option value="mechanic">기계공학과</option> 
+                        <option value="indust">산업공학과</option>
+                        <option value="elec">전기전자공학과</option>
+                        <option value="computer">컴퓨터 공학과</option>
+                        <option value="chemical">화학공학과</option>
+                    </optgroup>
+                    <optgroup label="인문대학">
+                        <option value="history">사학과</option>
+                        <option value="lang">어문학부</option>
+                        <option value="philo">철학</option>
+                    </optgroup>
+                </select>
+            </p>
+            <input type="text" list="tech" name="class"> <!--selcet도 가능하고 입력하면 입력한 값의 옵션만 나오게 고를 수 있다.-->
+            <datalist id="tech"> <!--바로 위에 list와 연결된다-->
+                <select name="class">
+                    <option value="mechanic" label="기계공학과"></option> 
+                    <option value="indust" label="산업공학과"></option>
+                    <option value="elec" label="전기전자공학과"></option>
+                    <option value="computer" label="컴퓨터 공학과"></option>
+                    <option value="chemical" label="화학공학과"></option>
+                </select>
+            </datalist>
+        </fieldset>
+    </form>
+    <h2>소개글</h2> <!--보여지는 input크기 cols =글자수, rows = 행의개수 글자는 계속 쓸수 있음-->
+    <textarea cols="50" rows="10">안녕하세요</textarea> <!--시작했을 때 안녕하세요가 나온다.-->
+
+</body>
+<!--블럭레벨요소 width = 화면전체 height = 자기자신만 차지
+    인라인레벨요소 width, height 둘다 자기 자신만 차지-->
+</html>
