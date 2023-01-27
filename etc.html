@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기타 태그들</title>
+    <script>
+        let bar;
+        let cnt;
+        let sp;
+        function download() {
+            bar=document.getElementById("bar");
+            sp=document.getElementById("memo");
+            cnt=0;
+            load();
+        }
+        function load(){
+            let s=setInterval(function () {
+                cnt+=5;
+                bar.value=cnt;
+                if(cnt == 100){
+                    clearInterval(s);
+                    sp.innerHTML="완료!"
+                }
+            }, 500);
+        }
+    </script>
+</head>
+<body> <!--input으로 숫자를 넣어도 문자로 인식함-->
+    <form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+        <input type="number" name="num1" value="0">+
+        <input type="number" name="num2" value="0">=
+        <output name="result"></output>
+    </form>
+    
+    <p>
+        <label>10초 남음</label>
+        <progress value="50" max="60"></progress>
+    </p> <!--60길이의 진행바?같은 것에 50이 채워져있음-->
+    <p>
+        <label>진행률 30%</label>
+        <progress value="30" max="100"></progress>
+    </p>
+    <p>
+        <input type="button" value="다운로드 시작" onclick="download()">
+        <progress id="bar" value="0" max="100"></progress>
+        <span id="memo"></span>
+    </p>
+</body>
+</html>
