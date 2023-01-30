@@ -1,0 +1,9 @@
+@charset "utf-8"; /*한글이 나오면 깨지지 않게하는것*/
+@import url("common.css"); /*이렇게 사용도 가능 */
+h1 {
+    color : red;
+}
+
+p {
+    color : green;
+}
