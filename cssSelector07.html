@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      /*type이 checkbox인 input이 체크되어있을 때 가장 인접한 div의 height를 0으로 한다*/
+      input[type= checkbox]:checked + div {
+        height: 0; /*0이면 px 생략 가능*/
+      }
+      div{
+        width: 300px;
+        height: 400px;
+        border: 1px solid black;
+        overflow: hidden; 
+        /*부모영역을 벗어나면 안보이게 해주는 것
+        overflow: scroll; = 부모영역에서 스크롤로 움직이면서 보이게 하는 것*/
+        transition: 3s; 
+        /*전환한다: 3초동안(s=초)*/
+      }
+    </style>
+</head>
+<body>
+    <input type="checkbox">뉴스 감추기
+    <div>
+      <h2>오늘의 뉴스</h2>
+      <p>다가오는 봄을 앞두고 일부 지방자치단체가 벌써부터 봄 축제 준비에 들어가는 가운데 한 축제가 눈에 띈다. 오는 4월 강화도에서 열리는 ‘고려산 진달래 축제’다.</p>
+      <p>고려산 진달래는 매년 4월 산 중턱부터 정상에 펼쳐진 진달래 군락이 연분홍빛 꽃물결의 장관을 이룬다.</p>
+      <p>강화군은 고려산 진달래 개화에 맞춰 등산로 정비, 임시 화장실 운영, 주차장 확보, 안내부스 등으로 군락지를 찾는 관광객에게 편의를 제공하고,
+         주요 관광지를 연계하는 다양한 프로그램으로 방문객의 만족도를 향상하겠다고 입장을 발표했다.</p>
+    </div>
+</body>
+</html>
