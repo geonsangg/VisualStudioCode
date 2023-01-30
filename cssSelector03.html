@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+        /*  관습 = id는 남발하지 않는다. 커다란 영역만 id를 준다.
+        *=전체선택자 
+       * {
+        color: red;
+       } 
+        , = 여러개를 같이 적용 할때 
+       h1,p{
+        background-color: yellowgreen;
+       } */
+       #target1{
+        color: red;
+       }
+       #target2{
+        color: green;
+        border: 1px solid black;
+       }
+       #target3{
+        color: blue;
+       }
+    </style>
+</head>
+<body>
+    <h1>css 선택자 수업</h1>
+    <p>html 수업 - 홈페이지 뼈대</p>
+    <p>css 수업 - 디자인, 레이아웃</p>
+    <h2>웹페이지 제작</h2> 
+    <ul>
+        <li id="target1">페이지 구상</li>
+        <li id="target2">와이어프레임</li>
+        <li id="target3">html 문서 제작</li>
+        <li>css 레이아웃, 디자인 완성</li>
+        <li>javascript로 정적인 홈페이지를 동적으로 제작</li>
+    </ul>
+</body>
+</html>
