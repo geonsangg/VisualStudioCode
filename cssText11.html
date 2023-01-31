@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문자 관련 스타일</title>
+  <style>
+    img {
+      width: 300px;
+    }
+    p {
+      border: 1px solid black;
+    }
+    /*글자와 이미지가 같이있을 때 세로정렬 가능 
+    top = 글자가 위에정렬 middle = 중앙에 bottom = 아래에*/
+    .valign img {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    내일 응용 SW기초 기술 평가
+    <img src="images/dish4.jpg" alt="dish">
+  </p>
+  <p class="valign">
+    내일 응용 SW기초 기술 평가
+    <img src="images/dish5.jpg" alt="dish">
+  </p>
+</body>
+</html>
