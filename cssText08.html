@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문자 관련 스타일</title>
+  <style>
+    /*a태그는 기본적으로 밑줄이 그어져 있다.
+    text-decoration: none; = 밑줄을 없애준다*/
+    a {
+      text-decoration: none;
+    }
+    /*hover = 마우스를 올리면 
+    underline = 밑줄*/
+    a:hover {
+      text-decoration: underline;
+    }
+    h2 {
+      text-decoration: underline;
+    }
+    /*line-through = 글자 중간에 줄
+      overline = 글자위 줄*/
+    .target > span {
+      text-decoration: line-through;
+    }
+    /*text-transform: lowercase = 대문자를 소문자로 바꿈*/
+    .trans1 {
+      text-transform: lowercase;
+    }
+    /*uppercase = 소문자를 대문자로 바꿈*/
+    .trans2 {
+      text-transform: uppercase;
+    }
+    /*capitalize = 단어의 첫글자를 대문자로 바꿈*/
+    .trans3 {
+      text-transform: capitalize;
+    }
+    /*letter-spacing = ?px 글자 간격 (?px씩 띄겠다 -(음수)도 가능)*/
+    .target2 {
+      letter-spacing: -1px;
+    }
+    /*word-spacing = 단어 간격 (px도 가능)*/
+    .target3 {
+      word-spacing: 2em;
+    }
+  </style>
+</head>
+<body>
+  <h2>토마토</h2>
+  <p>토마토는 비타민 A,C가 풍부한 <span>채소</span>이다.</p>
+  <a href="#">직영농장</a>
+  <p class="target">
+    <span>정상가격 : 50,000원</span> ☞ 할인가격 45,000원
+  </p>
+  <ul>
+    <li class="trans1">HTML</li>
+    <li class="trans2">css</li>
+    <li class="trans3">javascript</li>
+    <li class="trans3">have to study</li>
+  </ul>
+  <p class="target1">오늘은 스타일 속성을 배우고 있습니다.</p>
+  <p class="target2">오늘은 스타일 속성을 배우고 있습니다.</p>
+  <p class="target3">오늘은 스타일 속성을 배우고 있습니다.</p>
+</body>
+</html>

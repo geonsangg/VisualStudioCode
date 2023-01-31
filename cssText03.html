@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자 관련 스타일</title>
+    <style>
+      /*기본 글꼴 크기 = 16px
+      부모 글꼴 크기를 바꾸면 자식도 알아서 바뀜*/
+      html {
+        font-size: 16px;
+      }
+      p {  
+        font-size: 1em; /*em = 부모의 배수 1em=1배 2em=2배 1.5em=1.5배*/
+      }
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+      #area{
+        font-size: 1em;
+      }
+      ul{          /* 16 X 1.3 */
+        font-size: 1.3em;
+      }
+      .target{     
+        font-size: 1.5rem; /* rem = 최상위 부모의 배수가 된다.*/
+         /*em을 사용한다면 부모의 배수이기 때문에 조부모 html에 부모배수를 곱한 값에 1.5배이다. 따라서 16(html) X 1.3(ul) X 1.5가 되는것*/
+      }
+    </style>
+</head>
+<body>
+  <h1>문자관련 스타일 수업</h1>
+  <p>html 수업 - 홈페이지 뼈대</p>
+  <p>css 수업 - 디자인, 레이아웃</p>
+  <h2>웹페이지 제작</h2> 
+  <ul>
+      <li>페이지 구상</li>
+      <li>와이어프레임</li>
+      <li>html 문서 제작</li>
+      <li class="target">css 레이아웃, 디자인 완성</li>
+      <li>javascript로 정적인 홈페이지를 동적으로 제작</li>
+  </ul>
+  <div id="area">
+    <p>나는 새로운 영역안에 있는 단락</p>
+  </div>
+</body>
+</html>

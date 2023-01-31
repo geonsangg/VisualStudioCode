@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문자 관련 스타일</title>
+  <style>
+    /*line-height = p태그 안에서 줄간격(단락 간격은 다름) ,값 = 배수단위(em은 사용하지 않음) 1로하면 딱 붙어서 나옴
+    값 = px도 가능 (글꼴 크기가 16px라고 치면 20px = 4px만큼 벌어짐)*/
+    p {
+      line-height: 1.6;
+      font: 20px/1.6 "궁서";
+    }
+    /*font: 모든 폰트 속성을 한꺼번에 할 수 있음
+      font: [font-weight, font-style, font-variant][font-size/line-hight][font-family];
+          세가지 순서로 맞추어 써야 하며 글자 크기와 글꼴은 생략 불가능 */
+    h2 {
+      font: normal 30px "맑은 고딕";
+    }
+  </style>
+</head>
+
+<body>
+  <h2>오늘의 뉴스</h2>
+  <p>앞서 송중기는 팬카페를 통해 “제 곁에서 저를 응원해주고 서로 아끼며 소중한 시간을 함께 해온
+    케이티 루이스 사운더스(Katy Louise Saunders) 양과 앞으로의 인생을 함께 하기로 맹세했다”라고 재혼을 발표했다.</p>
+  <p>케이티의 임신 소식이 전해진 이후 온라인 상에서는 그녀가 8월 출산 예정이라는 추측이 제기됐다. 하지만 송중기 소속사 
+    측은 "출산과 관련해서는 배우의 사생활이라 확인해줄 수 없다"고 선을 그었다.</p>
+  <p>송중기의 아내가 된 케이티는 1984년 영국에서 태어난 배우로 송중기보다 1살 연상이다. 
+    영화 '처녀의 성'(2003), '리지 맥과이어'(2003), '보르히아:역사상 가장 타락한 교황'(2006), '써드 퍼슨'(2013) 등에 출연했다.</p>
+</body>
+
+</html>
