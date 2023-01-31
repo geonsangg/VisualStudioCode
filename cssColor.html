@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문자 관련 스타일</title>
+  <style>
+    body{
+      /*색상 16진수 표현법 #rrggbb (0~f) rgb가 2자리씩 같다면 1가지만 써도 가능하다(ff0000 = f00)
+      background-color: #FAEBFF;*/
+      /*색상 10진수 표현번 rgb(r, g, b)
+      background-color: rgb(255, 200, 255);*/
+      /* 배경이미지 */
+      background-image: url(images/Penguins.jpg);
+    }
+   h1 {
+    margin-top: 100px;
+    /*rgba = (r, g, b, 투명도(0 (투명) ~ 1 (불투명))*/
+    background-color: rgba(0, 255, 200, 0.5);
+    /*hsl = 주로 디자이너들이 사용 (색상(0~360), 채도, 명도*/
+    color: hsl(300,100%, 50%)
+   }
+  </style>
+</head>
+<body>
+  <h1>색상 설정</h1>  
+</body>
+</html>
