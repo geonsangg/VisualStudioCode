@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      /*불릿기호의 모양을 바꾸는것*/
+      #menu {
+        list-style-type: square;
+      }
+      /*menu 후손의 ul
+      불릿기호를 이미지로 하는것(단.포토나일러로 이미지 크기를 조절 해야한다)*/      
+      #menu ul {
+        list-style-image: url(images/19s.png);
+      }
+    </style>
+</head>
+<body>
+  <h2>오늘은목요일</h2>
+  <ul id="menu">
+    <li>부대찌개</li>
+    <li>된장지개</li>
+    <li>김치찌개</li>
+    <li>순대국</li>
+    <li>비빔밥</li>
+    <li>냉면
+      <ul>
+        <li>비빔냉면</li>
+        <li>물냉면</li>
+        <li>회냉면</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>
