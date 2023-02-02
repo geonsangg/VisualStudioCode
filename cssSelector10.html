@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      /*link가 걸린 문자에 속성을 부여하는것
+      작성 순서가 중요
+      방문하기전 밑줄 없애고, 색은 초록*/
+      a:link {
+        text-decoration: none;
+        color: green;
+      }
+      /*방문한 후 링크에 밑줄 없애고, 색은 빨간색*/
+      a:visited {
+        text-decoration: none;
+        color: red;
+      }
+      /*hover : 마우스를 올리거나, focus : tap키로 포커스가 갔을 때 (웹 접근성 때문에 같이 사용해주어야한다.)
+       밑줄이 생기고, 색은 파란색으로 된다*/
+      a:hover, a:focus {
+        text-decoration: underline;
+        color: blue;;
+      }
+      /*active : 클릭하고 때지 않는 상태*/
+      a:active {
+        color: yellow;
+      }
+    </style>
+</head>
+<body>
+  <h2>영화정보</h2>
+  <ul>
+    <li><a href="#">현재상영작</a></li>
+    <li><a href="#">상영예정작</a></li>
+  </ul>
+</body>
+</html>

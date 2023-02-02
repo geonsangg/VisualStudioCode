@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      /*id가 menu인 자식 li의 첫번째 자식만*/
+      #menu > li:first-child {
+        color: red;
+      }
+      #menu > li:last-child {
+        color: blue;
+      }
+      /*nth-child() = 몇번째인지를 고르는것*/
+      #menu > li:nth-child(2) {
+        color: green;
+      }
+      /*등차 수열로 홀수만 적용(n에 0을 넣으면 1 , 1을 넣으면 3, 2를 넣으면 5)*/
+      #menu > li:nth-child(2n+1){
+        background-color: yellow;
+      }
+      table {
+        width: 200px;
+        text-align: center;
+        border-collapse: collapse; /*표의 2중선을 1로 만드는것*/
+      }
+      td{
+        padding: 10px;
+      }
+      table tr:nth-child(2n+1) {
+        background-color: beige;
+      }
+      table tr:nth-child(2n) {
+        background-color: burlywood;
+      }
+    </style>
+</head>
+<body>
+  <h2>오늘의 메뉴</h2>
+  <ul id="menu">
+    <li>부대찌개</li>
+    <li>된장찌개</li>
+    <li>김치찌개</li>
+    <li>순대국</li>
+    <li>칼국수</li>
+    <li>비빔밥</li>
+  </ul>
+  <h2>건강의 좋은 음식</h2>
+  <table border="1">
+    <tr><th>종류</th></tr>
+    <tr><td>블루베리</td></tr>
+    <tr><td>귀리</td></tr>
+    <tr><td>토마토</td></tr>
+    <tr><td>시금치</td></tr>
+    <tr><td>적포도주</td></tr>
+    <tr><td>견과류</td></tr>
+    <tr><td>브로콜리</td></tr>
+    <tr><td>연어</td></tr>
+    <tr><td>마늘</td></tr>
+    <tr><td>녹차</td></tr>
+  </table>
+</body>
+</html>

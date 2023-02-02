@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      /* :: = 가상요소선택자 
+      first-letter = 첫글자 */
+      p::first-letter {
+        font-size: 2em;
+        color: red;
+      }
+      /*first-line = 첫줄 (브라우저 크기마다 다르다)*/
+      p::first-line {
+        background-color: yellow;
+      }
+      /*마우스로 글씨를 드래그 했을때*/
+      p::selection {
+        background-color: green;
+        color: black;
+      }
+      /*before = 앞부분 content = 내용
+      즉- h3앞부분에 겨울을 빨간색으로 넣겠다*/
+      h3::before {
+        content: "겨울";
+        color: red;
+      }
+      /*after = 뒷부분*/
+      h3::after {
+        content: "-코로나도 함께";
+        color: blue;
+      }
+    </style>
+</head>
+<body>
+  <h2>오늘의 뉴스</h2>
+  <p>아르나우트 단주마가 1월 이적시장을 통해 입단하면서 공격 세 자리를 두고 5명이 경쟁한다. 스트라이커 해리 케인은 부동의 주전이다. 지난 시즌 잉글랜드 프리미어리그(EPL) 득점왕을 차지한 손흥민 역시 늘 선발 라인업에 이름을 올렸다.</p>
+  <h3>감기 조심하세요</h3>
+</body>
+</html>
