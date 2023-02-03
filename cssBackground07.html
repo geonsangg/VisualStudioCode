@@ -1,0 +1,30 @@
+  <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      #box {
+        height: 300px;
+        /*vender prefix (공급업체 접두사)낙후된 환경에서 사용하는 컴퓨터브라우저에 따라
+        background: -webkit-linear-gradient(left top, #00f, #fff); 예전 브라우저
+        background: -moz-linear-gradient(right bottom, #00f, #fff); 파이어 폭스
+        background: -o-linear-gradient(right bottom, #00f, #fff); 오페라
+        웹표준화로 왠만하면 위에꺼 안써도 가능하다
+            그라데이선 (to 방향(right,left,bottom,top 대각선도 가능), 시작색, 끝색)
+        background: linear-gradient(to right bottom, #00f,#fff);   
+        개수는 상관없음 to right bottom, #00f 30%, #0ff 80%, #fff 100% 이렇게 도 가능
+        background: linear-gradient(180deg, #0f0, #fff);
+                                 직접 각도를 줄 수도 있다.*/
+        background: radial-gradient(white, yellow, red);
+                   /*원형 그라데이션 ( 안쪽,    중간,   바깥쪽) %가능 */                          
+      }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+</body>
+</html>

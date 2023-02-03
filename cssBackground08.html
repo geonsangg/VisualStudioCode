@@ -1,0 +1,24 @@
+  <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      h2 {
+        /*패딩은 벽에서 안쪽여백 마진은 객체끼리 여백*/
+        padding: 100px;
+        text-align: center;
+        background: url(images/boy.png), url(images/bg5.png),
+                    linear-gradient(to right, rgba(0,100,0,0), rgba(0,100,0,0.5));
+        background-repeat: no-repeat, no-repeat, no-repeat; /*boy, bg5, 그라데이션*/
+        background-size: 100px, 100px, 100%;                             
+        background-position: left bottom, 97% 30%, left; 
+                     /*위치:보이 왼쪽아래, bg5 width 97% height 30%, 그라데이션 왼쪽*/
+      }
+    </style>
+</head>
+<body>
+    <h2>다음주에는 레이아웃에 관련된 스타일을 배웁니다.</h2>
+</body>
+</html>

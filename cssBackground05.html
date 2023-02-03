@@ -1,0 +1,26 @@
+  <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      #box {
+        width: 600px;
+        height: 400px;
+        border: 1px solid;
+        /* 0 0 = x y (안쓰면 0 0)*/
+        background: url(images/송해.jpg)no-repeat 0 0,
+                    url(images/호동.jpg)no-repeat 100% 0,
+                    url(images/형돈.jpg)no-repeat 0 100%,
+                    url(images/웃는사람.png)no-repeat 100% 100%,
+                    url(images/x.jpg)no-repeat 50% 50%;        
+      }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+</body>
+</html>

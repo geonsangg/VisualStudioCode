@@ -1,0 +1,31 @@
+  <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      #box {
+        width: 600px;
+        height: 400px;
+        border: 1px solid;
+        background-color: aqua;
+        /*안쪽여백(background-image = 이동 없이 글씨만)*/
+        padding: 20px;
+        /*글 내용이 들어간 부분부터 background를 시작하겠다는 뜻**/
+        background-clip: content-box;
+        /*background-origin(대부분 clip을 같이 사용함) 
+        padding-box; = 안쓰면 padding-box
+        content-box = 글 내용이 들어간 부분부터 background를 시작하겠다는 뜻*/
+        background-origin: content-box;
+      }
+    </style>
+</head>
+<body>
+    <div id="box">
+      <p>밀워키 벅스는 3일 오전(한국시간) 미국 위스콘신주 밀워키의 파이서브 포럼에서 열린 NBA 2022-23시즌 정규리그 홈 경기에서 106-105, 1점 차로 승리했다. 이로써 밀워키는 35승 17패로 동부 콘퍼런스 2위 자리를 유지했고 6연승을 해냈다. (클리퍼스 29승 26패)
+        밀워키 벅스는 3일 오전(한국시간) 미국 위스콘신주 밀워키의 파이서브 포럼에서 열린 NBA 2022-23시즌 정규리그 홈 경기에서 106-105, 1점 차로 승리했다. 이로써 밀워키는 35승 17패로 동부 콘퍼런스 2위 자리를 유지했고 6연승을 해냈다. (클리퍼스 29승 26패)</p>
+
+    </div>
+</body>
+</html>

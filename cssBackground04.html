@@ -1,0 +1,28 @@
+  <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      #box {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        background: #ff0 url(images/Penguins.jpg) no-repeat;
+        /*background-size: 100%; width,height중 큰 값을 넓이에 딱 맞게 맞추고 작은 값은 비율로 바뀜*/
+        /*background-size: contain; 위와 거의 같음*/
+        /*background-size: auto; 안쓰면 auto 기본 크기*/
+        /*background-size: 300px 200px; 넓이 300 높이 200*/
+        /*background-size: 300px; 넓이를 맞추고 높이는 비율로 바뀜*/
+        /*background-size: 50% 100%; 넓이는 반만 높이는 꽉*/
+        /*background-size: cover; contain의 반대개념 작은 값을 딱 맞추고 큰값을 비율로 바꿈*/
+      }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+</body>
+</html>
