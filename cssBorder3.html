@@ -1,0 +1,39 @@
+  <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+     /*요소의 전체너비 = width + 2*(padding + border)
+       요소의 전체 높이 = height + 2*(padding + border)*/
+     .box {
+      width: 300px;
+      height: 200px;
+      background-color: #ff0;
+      border: 1px solid;
+     }
+     .box1 {
+      margin: 30px 50px 10px 20px;
+      padding: 20px;
+     }
+     .box2 {
+      margin: 30px 50px;
+     }
+     .box3 {
+      margin: 30px 5px 20px;
+     }
+     .box4 {
+      margin-left: 100px;
+     }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+      <p>전 세계 구독자수 1위를 기록한 유튜버가 시각 장애인 의료지원에 나서자 여론의 반응이 엇갈리고 있다고</p>
+    </div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+</body>
+</html>

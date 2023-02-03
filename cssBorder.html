@@ -1,0 +1,46 @@
+  <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 200px;
+        /*굵기 (시계방향) 4개쓰면 위 오른쪽 아래 왼쪽           예시) border-width: 1px 5px 8px 15px;
+                         3개쓰면 위 오른쪽 아래 왼쪽=오른쪽    예시) border-width: 1px 5px 8px;
+                         2개쓰면 위 오른쪽 아래=위 왼쪽=오른쪽 예시) border-width: 1px 5px;*/ 
+        border-width: 10px;
+        border-color: goldenrod;
+        margin: 20px;
+      }
+      .box1{ /*solid= 실선 dotted= 점선 dashed =긴 점선
+               double=이중선 groove = 파인듯한느낌(액자) ridge = 솟아오른 느낌 (액자)*/
+        border-style: double;
+      }
+      .box2 {         /*왼쪽,위가 솟은 느낌*/
+        border-style: inset;
+      }
+      .box3 {        /*오른쪽,아래가 솟아오른 느낌*/
+        border-style: outset;
+        background: url(images/Penguins.jpg) no-repeat;
+        background-size: cover;
+      }
+      h1 {
+        width: 300px;
+        /*border-top = 위쪽만 테두리를 주는 것*/
+        border-top: 1px solid black;
+        /*boder-bottom = 아래쪽만 테두리를 주는 것*/
+        border-bottom: 1px solid black;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <h1>대한민국</h1>
+</body>
+</html>
