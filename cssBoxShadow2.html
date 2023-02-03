@@ -1,0 +1,50 @@
+  <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+     p {
+      width: 300px;
+      padding: 20px;
+      background-color: aqua;
+      display: inline-block;
+      margin: 20px 10px;
+      border-radius: 55px 10px / 10px 55px;
+     }
+     p:nth-of-type(1) {
+      box-shadow: 10px 15px 10px;
+     }
+     p:nth-of-type(2) {
+      box-shadow: 10px 15px 10px rgba(0, 0, 50, 0.4);
+     }
+     p:nth-of-type(3) {
+      /*4번재 = 확장*/
+      box-shadow: 10px 15px 10px 7px rgba(0, 0, 50, 0.4);
+     }
+     p:nth-of-type(4) {
+      /*inset = 안으로*/
+      box-shadow: 10px 15px 10px inset rgba(0, 0, 50, 0.4);
+     }
+     p:nth-of-type(5){
+      /*번짐 없이*/
+      box-shadow: 10px 15px rgba(0, 0, 50, 0.4);
+     }
+     p:nth-of-type(6){
+      box-shadow: 5px 5px 5px darkred,
+                  10px 10px 5px yellow,
+                  15px 15px 15px darkblue;
+     }
+    </style>
+</head>
+<body>
+   <h1>세계의 명언들</h1>
+   <p>지혜는 호기심에서 비롯된다.</p>
+   <p>가장 적은 것으로도 만족할 수 있는 사람이 바로 가장 부유한 사람이다.</p>
+   <p>세상을 움직이려면 먼저 자기 자신을 움직여야 한다.</p>
+   <p>만약 누군가를 당신 편으로 만들고 싶다면  먼저 당신이 그의 진정한 친구라는 확신을 줘라.</p>
+   <p>친구와 어둠 속을 걷는 것이 혼자 밝은 곳을 걷는 것보다 낫다.</p>
+   <p>지혜는 학교에서 배우는 것이 아니라 평생 노력해서 얻는 것이다.</p>
+</body>
+</html>
