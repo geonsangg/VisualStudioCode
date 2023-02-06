@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        border: 3px solid red;
+        /*전환할 항목
+        transition-property: width;
+        전환할 시간
+        transition-duration: 2s;
+        전환할 방식? 안쓰면 linear
+        transition-timing-function: linear;
+        지연시간 (1초 있다가 전환 시작)
+        transition-delay: 1s;*/
+        /*duration,function,delay생략가능*/
+        transition: width 1s, border 3s ;
+        /*전부 동시에 같은 시간을 전환할 때에는 all 1s처럼 all로 해도 된다.*/
+      }
+      #box:hover {
+        width: 500px;
+        height: 300px;
+        border: 10px dotted yellow;
+      }
+      #menu li {
+        list-style: none;
+      }  
+      #menu a {
+        text-decoration: none;
+        display: block;
+        width: 200px;
+        height: 20px;
+        padding: 10px;
+        margin-bottom: 2px;
+        background-color: yellowgreen;
+        color: #fff;
+        text-indent: 10px;
+        transition: width 1s, color 1s;
+      }
+      #menu li a:hover {
+        width: 300px;
+        color: #f00;
+      }
+      img {
+        opacity: 0.1;
+        transition: opacity 5s;
+      }
+      img:hover {
+        opacity: 1;
+      }
+    </style>
+</head>
+<body>
+  <div id="box">
+
+  </div>
+  <ul id="menu">
+    <li><a href="#">회사소개</a></li>
+    <li><a href="#">제품소개</a></li>
+    <li><a href="#">서비스</a></li>
+    <li><a href="#">커뮤니티</a></li>
+    <li><a href="#">자료실</a></li>
+  </ul>
+  <img src="images/귀신.jpg" alt="귀신">
+</body>
+</html>
