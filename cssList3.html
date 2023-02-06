@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      /*자식이 float 특성을 가졌을 때 부모한테 overflow: hidden을 주게 되면 부모가 자식을 감싸게 된다.
+      #menu {
+        overflow: hidden;
+      }*/
+      #menu > li {
+        list-style: none;
+        /*주로 요소들을 가로로 배치할 떄 많이 사용된다
+        left = 위에부터 왼쪽에 배치, right = 위에부터 오른쪽에 배치*/
+        float: left;
+        padding: 10px;
+        background-color: gray;
+      }
+      #menu a {
+        text-decoration: none;
+        color: white;
+      }
+      /*clear = float 속성을 해제한다.*/
+      p {
+        clear: both;
+      }
+    </style>
+</head>
+<body>
+  <ul id="menu">
+    <li><a href="#">회사소개</a></li>
+    <li><a href="#">제품소개</a></li>
+    <li><a href="#">서비스</a></li>
+    <li><a href="#">커뮤니티</a></li>
+    <li><a href="#">자료실</a></li>
+  </ul>
+  <p>아랫집 사는 단락</p>
+</body>
+</html>
