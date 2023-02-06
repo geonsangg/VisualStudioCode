@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 150px;
+        margin: 10px;
+      }
+      .box1 {
+        /*아무것도 안쓰면 = content-box
+        content-box = 내용을 사용하는 공간은 변하지 않고 패딩,border만큼 전체크기가 커진다. 높이,너비 += 2*(padding+border)*/
+        box-sizing: content-box;
+        border: 2px solid red;
+        background-color: aqua;
+        padding: 30px;
+      }
+      .box2 {
+        /*border-box = 전체크기가 변하지 않고 패딩,border만큼 내용을 사용하는 공간이 작아진다. 내용물 공간 -= 2*(padding+border)*/
+        box-sizing: border-box;
+        border: 2px solid blue;
+        background-color: aqua;
+        padding: 30px;
+      }
+    </style>
+</head>
+<body>
+  <div class="box box1">
+    <p>content박스로 구성</p>
+  </div>
+  <div class="box box2">
+    <p>border박스로 구성</p>
+  </div>
+</body>
+</html>
