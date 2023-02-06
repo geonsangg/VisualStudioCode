@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      div {
+        width: 250px;
+        height: 240px;
+        border: 1px solid;
+        display: inline-block;
+        margin-right: 50px;
+      }
+      .rotate {
+        transform: rotateX(50deg);
+      }
+      #per:hover .rotate{
+        /*perspective (원근감)*/
+        transform: perspective(150px) rotateX(30deg);
+      }
+    </style>
+</head>
+<body>
+    <div>
+      <img src="images/girl.jpg" alt="girl">
+    </div>
+    <div>
+      <img class="rotate" src="images/girl.jpg" alt="girl">
+    </div>
+  <div id="per">
+    <div>
+      <img class="rotate" src="images/girl.jpg" alt="girl">
+    </div>
+  </div>
+</body>
+</html>
