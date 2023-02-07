@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      @keyframes bg {
+        /*from to 와 같음 단.0%~100% 까지 마음대로 여러개 줄 수 있다.*/
+        0% {
+          background-color: blue;
+        }
+        33% {
+          background-color: green;
+          transform: translate(30px,20px);
+        }
+        66% {
+          background-color: yellow;
+          transform: translate(30px);
+        }
+        100% {
+          background-color: red;
+        }
+      }      
+      #box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        animation-name: bg;
+        animation-duration: 4s;
+        /*안쓰면 back(원상태) , forwards=바뀐 상태 유지 */
+        animation-fill-mode: forwards;
+      }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

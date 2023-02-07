@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      /*@keyframes 애니매이션이름 
+      from = 애니메이션 시작지점
+      to = 애니메이션 마무리*/
+      @keyframes colorChange {
+        from { 
+          background-color: blue;
+          border: 1px solid yellow;
+          border-radius: 50%;
+        }
+        to {
+          background-color: yellow;
+          border: 3px dotted green;
+        }
+      }
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(90deg);
+        }
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        margin-bottom: 20px;
+      }
+      #box1 {
+       /* animation-name: colorChange;
+       
+       몇초동안:
+        animation-duration: 3s;
+
+        alternate = 역방향도 같이 해달라는것. (즉,사용안하면 파란색에서 3초동안 노란색으로 변하고 바로 파란색으로 변하는데 사용하면 노란색에서 파란색 갈때에도 3초동안간다.
+        animation-direction: alternate;
+
+        몇번 실행할건지 (infinite 무한대도 가능)  alternate를 사용하면 count를 짝수로 해야함. (파란색->노란색(1),노란색->파란색(2) 처럼 역방향도 카운터 된다
+        animation-iteration-count: 4;
+
+        안쓰면 linear
+        animation-timing-function: ease-in;
+
+        위에 내용을 한번에 작성도 가능 (순서를 지켜야함)*/
+        animation: colorChange 3s alternate infinite ease-in;
+      }
+      #box2 {
+        animation-name: rotate;
+        animation-duration: 2s;
+        /*실행 지연*/
+        animation-delay: 2s;
+        animation-iteration-count: 2;
+      }
+      #box1:hover {
+        /*마우스를 올려 뒀을 때는
+        애니메이션을 멈춘다*/
+        animation-play-state: paused;
+      }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+</html>

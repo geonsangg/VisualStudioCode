@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      .corona {
+        width: 100%;
+        height: 200px;
+        background: url(images/corona.jpg)no-repeat;
+        background-size: 100%;
+        animation: back_move 10s alternate infinite;
+      }
+      .corona h2 {
+        color: #fff;
+        font-size: 3em;
+        text-align: center;
+        padding-top: 70px;
+      }
+      .corona h2 span {
+        color: #f00;
+      }
+
+      @keyframes back_move {
+       from {
+        background-position: 0 0;
+       }
+       to {
+        background-position: 0 100%;
+       }
+      }
+    </style>
+</head>
+<body>
+   <div class="corona">
+    <h2><span>코로나</span> 방심말고 끝까지 ~~~~~</h2>
+   </div>
+</body>
+</html>
