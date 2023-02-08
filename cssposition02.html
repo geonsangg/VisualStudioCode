@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS(cascading Style Sheets)</title>
+    <style>
+      #box1 {
+        width: 500px;
+        height: 300px;
+        border: 1px solid;
+        margin-bottom: 20px;
+      }
+      #box2 {
+        width: 500px;
+        height: 300px;
+        border: 1px solid;
+        position: relative;
+        /*부모의 포지션은 relative를 줘야한다 
+        이유 : absolute로 주면 부모의 0,0지점부터 시작해서 box1 과 겹치기 때문*/
+      }
+      img {
+        /*위치를 주려면 반드시 position속성이 있어야한다.
+        relative (상대 위치) =  원래 있는 내 위치에서 위치를 잡음
+        absolute (절대 위치) = 부모의 0,0 부터 시작해서 위치를 잡음
+        하지만 부모의 포지션이 없으면 body를 부모로 본다.*/
+        position: absolute;
+        right: 0;
+        top: 100px 
+      }
+    </style>
+</head>
+<body>
+  <div id="box1">
+    <p>랙돌고양이 성격을 자세히 살펴보면 여유있고 느긋한 성격을 지녔어요. 걸음걸이도 얌전할 정도로 온순한 아이에요. 공격성이 거의 없고 사교성이 좋아서 다른 고양이는 물론 강아지 그리고 어린 아이들과도 잘 어울릴 수 있는 고양이예요.
+  </div>
+  <div id="box2">
+    <img src="images/1.png" alt="">  
+  </div>
+</body>
+</html>
