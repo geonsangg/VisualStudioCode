@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스(flex) 레이아웃</title>
+    <style>
+      .flexbox {
+        height: 200px;
+        background-color: #ccc;
+        /*flex 레이아웃 : 기본은 float 처럼 가로로 배치*/
+        display: flex;
+      }
+      .flexbox > div {
+        background-color: lightgreen;
+        margin: 10px;
+        /* flex: 첫번째 숫자 grow 
+        0 = (그대로 냅둔다)  1 = (공간이 남을 때 늘려주는 방법) 2 = 2배로 3 = 3배로 
+         두번째 숫자 shrink
+        0 = (그대로 냅둔다)  1 = (공간이 부족할 때 줄여주는 방법) 2 = 2배로 3 = 3배로
+         세번째 숫자 basis(기본값)
+        0 = (그대로 냅둔다) 첫번째 숫자, 두번재 숫자중 하나가 0 일 때 0을 수행할 때의 크기를 정해준다*/
+       /* flex: 1;  flex: 1 = flex: 1 1 0  */
+      }
+      /*부모 공간이 남으면 box1 = 1 box2 = 2 box3 = 1 크기로 하겠다는 뜻*/
+      .box1 {
+        flex : 1 1 0;
+      }
+      .box2 {
+        flex: 2 2 0;
+      }
+      .box3 {
+        flex: 1 1 0;
+      }
+    </style>
+</head>
+<body>
+   <div class="flexbox">
+      <div class="box1">
+        <h1>1</h1>
+      </div>
+      <div class="box2">
+        <h1>2</h1>
+      </div>
+      <div class="box3">
+        <h1>3</h1>
+      </div>
+  </div>
+</body>
+</html>

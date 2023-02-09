@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스(flex) 레이아웃</title>
+    <style>
+      .flexbox {
+        height: 200px;
+        background-color: #ccc;
+        display: flex;
+        /* 안쓰면 row (왼쪽에서 오른쪽) row-reverse (오른쪽에서 왼쪽) 
+           column (위에서 아래) column-reverse (아래에서 위)*/
+        flex-direction: column;
+      }
+      .flexbox > div {
+        background-color: lightgreen;
+        margin: 10px;
+        flex: 1;
+      }
+    </style>
+</head>
+<body>
+   <div class="flexbox">
+      <div class="box1">
+        <h1>1</h1>
+      </div>
+      <div class="box2">
+        <h1>2</h1>
+      </div>
+      <div class="box3">
+        <h1>3</h1>
+      </div>
+  </div>
+</body>
+</html>
