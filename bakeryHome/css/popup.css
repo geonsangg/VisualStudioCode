@@ -1,0 +1,14 @@
+@charset "utf-8";
+h1 {
+    font-size: 1.3em;
+}
+#close {
+    height: 40px;
+    position: relative;
+}
+#close > .btn_close {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
