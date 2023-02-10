@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹 샘플페이지</title>
+    <style>
+        /* 모바일 페이지(기준) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            width: 100%;
+            background-color: #000;
+        }
+        nav ul {
+            height: 50px;
+            margin: 0;
+            list-style: none;
+            background-color: #000;
+            color: #fff;
+        }
+        nav ul li {
+            float: left;
+            padding: 10px;
+            margin: 5px 15px;
+            font-size: 0.8rem;
+        }
+        #container, nav {
+            width: 310px;
+            margin-bottom: 20px;
+        }
+        #intro {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #intro img {
+            max-width: 100%;
+        }
+        #desc {
+            width: 100%;
+            padding: 10px;
+        }
+        footer {
+            width: 100%;
+            height: 60px;
+            padding: 20px;
+            background-color: #37001c;
+            color: #fff;
+        }
+        footer p {
+            text-align: center;
+        }
+        /* 테블릿 페이지 */
+        @media screen and (min-width:768px) {
+            #container, nav {
+                width: 750px;
+                margin: 0 auto;
+            }
+            #intro {
+                width: 100%;
+            }
+            #intro img {
+                float: left;
+                width: 200px;
+                margin: 20px;
+            }
+            #desc {
+                clear: both;
+                width: 100%;
+                padding: 0;
+                margin: 10px auto;
+            }
+            footer {
+                height: 150px;
+                background: url(images/footer.jpg)no-repeat center;
+            }
+            footer p {
+                line-height: 150px;
+            }
+        }
+        /* 데스크탑 페이지 */
+        @media screen and (min-width:1024px) {
+            #container, nav {
+                width: 1000px;
+                margin: 0 auto;
+            }
+            #intro img {
+                float: left;
+            }
+            #desc {
+                display: inline-block;
+                width: 270px;
+                height: 200px;
+                padding: 5px;
+                border: 1px solid #ccc;
+                overflow: scroll;
+            }
+            footer {
+                clear: both;
+                height: 200px;
+                background: url(images/footer.jpg) no-repeat center;
+                background-size: cover;
+            }
+            footer p {
+                line-height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>메뉴1</li>
+                <li>메뉴2</li>
+                <li>메뉴3</li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        <section id="intro">
+            <img src="images/pic1.png" alt="">
+            <img src="images/pic2.png" alt="">
+            <img src="images/pic3.png" alt="">
+        </section>
+        <section id="desc" class="text">
+            <p>넥슨은 이번 호실적에 대해 모바일 신작 '던전앤파이터 모바일'과 'HIT2'가 흥행에 성공했고, 카타르 월드컵의 수혜를 누린 'FIFA 온라인 4', 대표적 스테디셀러 '메이플스토리' 등도 큰 성과를 보였기 때문이라고 분석했다.넥슨은 이번 호실적에 대해 모바일 신작 '던전앤파이터 모바일'과 'HIT2'가 흥행에 성공했고, 카타르 월드컵의 수혜를 누린 'FIFA 온라인 4', 대표적 스테디셀러 '메이플스토리' 등도 큰 성과를 보였기 때문이라고 분석했다.</p>
+        </section>
+    </div>
+    <footer>
+        <p>미디어 쿼리를 이용한 반응형 웹 페이지 샘플</p>
+    </footer>
+</body>
+</html>

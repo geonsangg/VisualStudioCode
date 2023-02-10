@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가변그리드</title>
+    <style>
+         #wrapper {
+            width: 96%;
+            margin: 0 auto;
+        }
+        header {
+            width: 100%;
+            height: 120px;
+            background-color: blue;
+        }
+        .head {
+            color: #fff;
+            text-align: center;
+            line-height: 120px;
+            /* vw = view width의 % */
+            font-size: 5vw;
+        }
+        .content {
+            float: left;
+            width: 62.5%;
+            height: 400px;
+            padding: 1.5625%;
+            background-color: orange;
+        }
+        .content img {
+            max-width: 80%;
+            height: auto;
+        }
+        .side {
+            float: right;
+            width: 31.25%;
+            height: 400px;
+            padding: 1.5625%;
+            background-color: greenyellow;
+        }
+        footer {
+            clear: both;
+            width: 100%;
+            height: 120px;
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1 class="head">가변 그리드 홈페이지</h1>
+        </header>
+        <section class="content">
+            <h2>홈페이지 메인 본문</h2>
+            <img src="../images/dish4.jpg" alt="">
+        </section>
+        <aside class="side">
+            <h2>광고 영역</h2>
+        </aside>
+        <footer>
+            <h2>푸터 영역</h2>
+        </footer>
+    </div>
+</body>
+</html>
