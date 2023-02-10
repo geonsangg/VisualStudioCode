@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드(grid) 레이아웃</title>
+    <style>
+      #wrap {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 150px 400px 150px;
+      }
+      #wrap > div {
+        margin: 2px;
+        padding: 10px;
+      }
+      .grid1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: aqua;
+      }
+      .grid2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background-color: orange;
+      }
+      .grid3 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        background-color: yellow;
+      }
+      .grid4 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: blueviolet;
+      }
+    </style>
+</head>
+<body>
+   <div id="wrap">
+      <div class="grid1">
+        <h1>header</h1>
+      </div>
+      <div class="grid2">
+        <h1>sideMenu</h1>
+      </div>
+      <div class="grid3">
+        <h1>content</h1>
+      </div>
+      <div class="grid4">
+        <h1>footer</h1>
+      </div>
+   </div>
+</body>
+</html>
