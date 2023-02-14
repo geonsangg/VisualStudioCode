@@ -1,0 +1,25 @@
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>자바스크립트</title>
+        <style>
+            h1 {
+                cursor: pointer;
+            }
+        </style>
+        <script>
+           window.onload = function () {
+            let t = document.querySelector("#title");
+            t.addEventListener("click", function () {
+                t.innerHTML = "다음주 실무응용 홈페이지 제작이 끝난후에 합니다.";
+                t.style.color = "red";
+            });   
+        }
+        </script>
+    </head>
+    <body>
+        <h1 id="title">자바스크립트 시작은?</h1>
+    </body>
+    </html>
