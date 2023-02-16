@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.more').click(function (event) {
+                event.preventDefault();
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- 건너뛰기 링크 시작 -->
@@ -222,31 +230,33 @@
 
             <!--신규이벤트, 관련사이트, 인기사이트 콘텐츠 시작-->
             <div id="linkArea">
-                <section class="event">
-                    <h2>신규<span>이벤트</span></h2>
-                    <div id="eventDetail">
-                        <a href="#">
-                            <img src="images/free_gift.gif" alt="이벤트 경품:웹표준 핵심 가이드북2" 
-                            width="163" height="77">
-                            <p><em>웹표준 핵심 가이드북 2 출시</em>선착순 500명 한정!!</p>
-                        </a>
-                    </div>
-                    <div class="btnEventArea">
-                        <a href="#" class="btnEventPrev"></a>
-                        <a href="#" class="btnEventNext"></a>
-                    </div>
-                </section>
-                <section class="relatedLink">
-                    <h2>관련<span>사이트</span></h2>
-                    <ul>
-                        <li><a href="http://www.jeumedia.com">제우미디어</a></li>
-                        <li><a href="http://www.w3.org">W3C</a></li>
-                        <li><a href="http://www.csszengarden.com">CSS ZENGARDEN</a></li>
-                        <li><a href="http://www.webstandards.org">WEBSTANDARDS</a></li>
-                        <li><a href="http://www.wah.ro.kr">웹 접근성 연구소</a></li>
-                    </ul>
-                </section>
-                <section class="hotLink">
+                <div class="eventrelatedArea">
+                    <section class="event">
+                        <h2>신규<span>이벤트</span></h2>
+                        <div id="eventDetail">
+                            <a href="#">
+                                <img src="images/free_gift.gif" alt="이벤트 경품:웹표준 핵심 가이드북2" 
+                                width="163" height="77">
+                                <p><em>웹표준 핵심 가이드북 2 출시</em>선착순 500명 한정!!</p>
+                            </a>
+                        </div>
+                        <div class="btnEventArea">
+                            <a href="#" class="btnEventPrev">이전 이벤트 보기</a>
+                            <a href="#" class="btnEventNext">다음 이벤트 보기</a>
+                        </div>
+                    </section>
+                    <section class="relatedLink">
+                        <h2>관련<span>사이트</span></h2>
+                        <ul>
+                            <li><a href="http://www.jeumedia.com">제우미디어</a></li>
+                            <li><a href="http://www.w3.org">W3C</a></li>
+                            <li><a href="http://www.csszengarden.com">CSS ZENGARDEN</a></li>
+                            <li><a href="http://www.webstandards.org">WEBSTANDARDS</a></li>
+                            <li><a href="http://www.wah.ro.kr">웹 접근성 연구소</a></li>
+                        </ul>
+                    </section>
+                </div>
+                    <section class="hotLink">
                     <h2>인기<span>사이트</span></h2>
                     <ol>
                         <li class="no1">
