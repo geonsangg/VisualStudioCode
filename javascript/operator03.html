@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <style>
+        #contents{
+            width: 450px;
+            margin: 0 auto;
+        }
+        #contents > img {
+            float: left;
+            margin-right: 20px;
+        }
+        #contents > ul {
+            list-style: none;
+            padding-top: 40px;
+        }
+        #contents li {
+            margin-bottom: 10px;
+        }
+        #contents li label {
+            width: 80px;
+            float: left;
+            text-align: right;
+        }
+        #contents li input {
+            width: 110px;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            margin: 0 5px 0 10px;
+        }
+        #contents > ul > li:last-child {
+            margin-top: 20px;
+            text-align: center;
+        }
+        #contents button {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            font-size: 1.1em;
+        }
+        #contents button:hover {
+            background-color: greenyellow;
+        }
+        #showResult {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+    </style>
+    <script>
+       function showDivide() {
+            let totalPencil = document.querySelector("#totalPencil").value;
+            let number = document.querySelector("#number").value;
+            let averPencil = parseInt(totalPencil/number);
+            let pencil = totalPencil%number;
+            document.querySelector("#showResult").innerHTML="연필 총 개수는 " + totalPencil + "개이며" + number + "명에게 나누어 줄 것입니다.<br>1인당 "
+             + averPencil + "개씩 나누어 주고 연필이 " + pencil + "개 남았습니다.";
+       }
+    </script>
+</head>
+<body>
+    <div id="contents">
+        <img src="../images/3.png" alt="pencil">
+        <ul>
+            <li>
+                <label for="totalPencil">연필총개수</label>
+                <input type="text" id="totalPencil">개
+            </li>
+            <li>
+                <label for="number">인원수</label>
+                <input type="text" id="number">명
+            </li>
+            <li>
+                <button onclick="showDivide();">연필 나누어주기</button>
+            </li>
+        </ul>
+        <div id="showResult">
+            
+        </div>
+    </div>
+</body>
+</html>

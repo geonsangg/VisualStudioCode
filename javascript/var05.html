@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <script>
+      // === 양변의 자료형과 값이 일치
+      // !== 양변의 자료형과 값이 다름
+      //alert("" == false);
+      //alert("" == 0);
+      //alert(0 == false);
+      //alert("273" == 273);
+      let bus = 3000;
+      let coffee = 2000;
+      let food =Number(prompt("오늘 점심비용은?","0"));
+      let price = bus + coffee + food;
+      let result = (price > 10000)?price-10000+"원 초과입니다." : "돈 관리 잘했어요.";
+      document.write(result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
