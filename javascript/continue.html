@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <script>
+      let nums = [26,87,36,44,98,23,15,67,99,20];
+      let sum = 0;
+      for(let i=0; i<nums.length; i++){
+        if(nums[i] % 2 == 1) {
+          continue;
+        }
+        sum += nums[i];
+      }
+      document.write(sum);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

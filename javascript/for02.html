@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <script>
+        let seasons = ["봄","여름","가을","겨울"];
+        /*for(let i=0; i<seasons.length; i++) {
+            document.write(seasons[i] + "<br>");
+        }*/
+        /*for(let i=seasons.length-1; i>=0; i--) {
+            document.write(seasons[i] + "<br>");
+        }*/
+        let scores=[89,74,63,88,70,96,88,55,60];
+        let sum = 0;
+        for(let i=0; i<scores.length; i++){
+            sum += scores[i];
+        }
+        document.write("총점 = " + sum + " 평균 = " + parseInt((sum/scores.length)));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

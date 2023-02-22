@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <style>
+        .gugu {
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 0 20px;
+            margin: 15px;
+            box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+            line-height: 2;
+        }
+        .gugu:hover {
+            background-color: antiquewhite;
+        }
+        .gugu h3 {
+            text-align: center;
+        }
+    </style>
+    <script>
+        document.write("<h2>▩ 우리모두 구구만들 외우자 ▦ </h2>");
+       for(let i=2; i<=9; i++){
+            document.write("<div class='gugu'>");
+            document.write("<h3>☆" + i + "단☆</h3>");
+            for(let j=1; j<=9; j++) {
+                document.write(i + " X " + j + " = " + (i*j) + "<br>");
+            }
+            document.write("</div>");
+       }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
