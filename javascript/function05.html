@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <style>
+      #pet {
+        width: 430px;
+        border: 1px solid #ccc;
+        margin: auto;
+        padding: 15px;
+        position: relative;
+      }
+      button {
+        border: 1px solid #ccc;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.7);
+        cursor: pointer;
+      }
+      .over {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+      }
+      .detail {
+        width: 420px;
+        text-align: justify;
+        line-height: 1.8;
+        display: none;
+      }
+    </style>
+    <script>
+      /* 윈도우창.뜨면=함수실행 
+        즉 html까지 완전히 다 실행된 후에 실행된다.*/
+      window.onload=function() {
+        let desc=document.querySelector("#desc");
+        let op=document.querySelector("#op");
+        let sp=document.querySelector("#shepherd");
+        op.onclick = function () {
+          desc.style.display="block";
+          op.style.display="none";  
+        }
+        // sp에 마우스를 가져가면
+        sp.onmouseover = function () {
+          sp.style.border="5px solid red";
+          sp.style.transition="border 1s";
+        }
+        // sp에 마우스를 때면
+        sp.onmouseout = function () {
+          sp.style.border="none";
+        }
+      }
+      /*function showDetail() {
+        desc.style.display="block";
+        op.style.display="none";
+      }*/
+      function hideDetail() {
+        desc.style.display="none";
+        op.style.display="block";
+      }
+    </script>
+</head>
+<body>
+   <div id="pet">
+      <img src="../images/shepherd.jpg" alt="shepherd" id="shepherd">
+      <button class="over" id="op">상세설명보기</button>
+      <div id="desc" class="detail">
+        <h3>shepherd</h3>
+        <p>세계에서 가장 많은곳에서 키우는 개. 목양견, 보초견, 경찰견(탐지 및 수색), 맹인을 위한 안내견, 애완견으로 길러지고 있다.</p>
+        <button class="close" onclick="hideDetail();">상세설명닫기</button>
+      </div>
+   </div>
+</body>
+</html>
