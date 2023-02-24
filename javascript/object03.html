@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <script>
+      let student = {
+        name : '홍길동',
+        kor : 90, eng : 70,
+        mat : 88, sci : 78
+      };
+      //with(객체이름) {} 안에 (객체)를 사용하겠다. 생략가능 
+      with(student) {
+        let sum = kor + eng + mat + sci;
+        let avg = sum / 4;
+        document.write("<h3> ** " + name + "의 성적표 ** </h3>");
+        document.write("<p>국어 : " + kor + "</p>");
+        document.write("<p>영어 : " + eng + "</p>");
+        document.write("<p>수학 : " + mat + "</p>");
+        document.write("<p>과학 : " + sci + "</p>");
+        document.write("<p>총점 : " + sum + "</p>"); 
+        document.write("<p>평균 : " + avg + "</p>");
+      }
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

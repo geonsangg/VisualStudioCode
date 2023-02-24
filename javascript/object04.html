@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <script>
+      let student = {};
+      //객체.속성명 = "속성값"; 으로 객체에 속성을 추가할 수 있다.
+      student.이름 = "홍길동";
+      student.취미 = "악기";
+      student.특기 = "프로그래밍";
+      student.장래희망 = "풀스택개발자";
+      //toString = 객체의 문자열을 반환하는 대표적인 메서드
+      //모든 자바스크립트 객체는 toString메서드를 상속받아 사용가능
+      //밑에 사용한 이유는 객체는 배열과 다르게 document.write(student); 라고 하면 객체 내용 전체가 나오는게 아니라 객체라고만 나오기때문.
+      student.toString = function() {
+          let output = "";
+          for(let key in this) { //this = student(자신)
+            if(key != "toString") {
+            output += key + " : " + this[key] + "<br>";
+            }
+          }
+          return output;
+      }
+      document.write(student.toString());
+      //객체에 속성을 삭제하는 함수.
+      delete(student.장래희망);
+      document.write("===================<br>");
+      document.write(student);
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <script>
+       let fruits = ["참외","딸기","바나나","사과","귤"];
+       //alert(fruits[0]);
+       for(let i in fruits) {
+            document.write(fruits[i] + "<br>");
+       }
+       // 객체란 {속성이름 : "속성값"} / 속성이름에는 ""를 안해도 되지만 속성값이 문자일경우 ""를 해줘야한다.
+       let product = {
+            제품명 : "건조 망고",
+            가격 : 5000,
+            유형 : "당절임",
+            원산지: "필리핀"
+       };
+       //   객체명.속성이름
+       //alert(product.제품명);
+       //alert(product["제품명"]); <- 배열처럼 쓰려면 속성이름에 ""를 붙여야한다.  ""를 사용안하면 변수를 찾기때문.
+
+       /* ket 안에 product의 속성을 하나씩 넣어서
+         도큐맨트에.작성한다(key = 속성명 , product[key변수안에 있는 값]*/
+       for(let key in product) {
+        document.write("▣" + key + ":" + product[key] + "<br>");
+       }
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <script>
+      let book = {
+          title : "어린왕자",
+          page : 65,
+          price : 15000,
+          author : "생텍쥐폐리"
+      };
+      document.write("<h2> ** 신간 도서 정보 ** </h2>");
+      for(let key in book) {
+          document.write(key + " : " + book[key] + "<br>");
+      }
+      //속성 값에 익명함수를 넣을 수 있다.
+      let person = {
+          name : "김철수",
+          age : 26,
+          eat : function (food) {
+               return this.name  + "가" + food + "을(를) 먹습니다."   // 객체 안에서 객체를 this로 할 수 있다. 객체 밖에서 호출 할때는 안됨.
+          },
+          address : "서울시 종로구"
+      };
+      //return은 받을 변수가 있어야한다. eat의 return값을 받아서 밑에서 result를 출력한것
+      let result=person.eat('밥');
+      document.write(result + "<br>");
+      document.write(person.name + "의 현재 나이는 " + person.age + "세입니다." );
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>  
+    <script>
+      //기본 자료형과 객체의 차이점
+      let num=200;
+      let objNum = new Number(200);
+      //alert(num);
+      //alert(objNum);
+      //alert(typeof(num));
+      //alert(typeof(objNum));
+      //객체는 메서드를 만들 수 있다.
+      objNum.corona = function () {
+        return "코로나 안녕";
+      }
+      alert(objNum.corona());
+    </script>
+</head>
+<body>
+  
+</body>
+</html>

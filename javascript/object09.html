@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>  
+    <script>
+      //생성자 함수(첫글자는 대문자)를 사용해 객체를 만드는 방법
+      //생성자 함수 = 객체를 만들어내는 함수
+      function Book(title, pages, price, author) {
+        //this(Book).title(속성명) = title(매개변수 function Book에 (안에 있는 매개변수) );
+        this.title = title;
+        this.pages = pages;
+        this.price = price;
+        this.author = author;
+      }
+      let html = new Book("웹표준의 정석",500,28000,"김철수");
+      let youtube = new Book("유튜브 영상 만들기",300,25000,"이영희");
+      let python = new Book("파이썬의 기본",520,32000,"홍길동");
+      //배열 안에 객체를 넣은것
+      let bookList = [html,youtube,python];
+      document.write("<h1>신간 도서 목록</h1>");
+      for(let i=0; i<bookList.length; i++) {
+        document.write("<p>책 제목 : " + bookList[i].title + "</p>");
+        document.write("<p>가격 : " + bookList[i].price + "</p>");
+        document.write("<p>저자 : " + bookList[i].author + "</p>");
+        document.write("=======================");
+      }
+    </script>
+</head>
+<body>
+  
+</body>
+</html>
