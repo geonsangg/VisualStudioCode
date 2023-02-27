@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String 내장객체의 메서드</title>  
+    <script>
+     let str1 = "hello javascript";
+     let str2 = str1.slice(3,7); // 3번째부터 7번째 전까지 가져온다.
+     let str3 = str1.slice(3,-3); // 3번째부터 뒤에서 3번째 전까지 가져온다. (뒤는 -1부터 시작)
+
+     let str4 = str1.substring(3,7); // slice와 거의 같음. 
+     let str5 = str1.substring(5); // 단, 인수를 1나만 사용할 수 있다. 5번째부터 끝까지.
+
+     let str6 = str1.substr(3,2); // 3번째부터 2개 가져온다.
+
+     let str7 = "html#css#javascript";
+     let arr = str7.split("#"); // 문자열을 ""로 배열로 분리함
+     //alert(arr[0]);
+     let alpha = "HTML";
+     //alert(alpha.toLocaleLowerCase());  toLocaleLowerCase() = 소문자로 바꿔줌
+
+     let alpha2 = "javascript";
+     //alert(alpha2.toUpperCase());  toUpperCase() = 대문자로 바꿔줌
+
+     //alert(alpha2.length); 길이
+
+     let na = "자바 웹개발자반 ";
+     let conNa = na.concat("파이팅!!"); // concat() = 뒤에 () 안에 내용을 넣어줌
+
+     let h = " hello my name is geon ";
+     //alert(h.trim());  trim() = 좌우(맨 앞, 맨 뒤)의 공백 제거
+
+     let asc = "ABC";
+     //alert(asc.charCodeAt(0));    0번째를 아스키코드로 가져온다.
+     
+     alert(String.fromCharCode(65)); //괄호 안에 있는 아스키코드를 문자로 가져온다.
+    </script>
+</head>
+<body>
+  
+</body>
+</html>

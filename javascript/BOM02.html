@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저 객체 모델(Browser Object Model)</title>  
+    <script>
+        let child = window.open("","","width = 600 height = 300");
+        let w = screen.width;
+        let h = screen.height;
+        //(함수,밀리초) setInterval = 초마다 실행 / setTimeout = 초가 되면 한번 실행
+        setInterval(function () {
+            child.moveBy(10,10); //처음 팝업창이 뜨고 1초마다 좌,상 10씩 떨어진 곳에 창이 뜬다.
+            child.resizeBy(-20,-20); // 처음 팝업창 크기에 1초마다 너비,높이가 20씩 줄어든다.
+        },1000);
+        if(child) {
+            //moveTo = 절대위치 / moveBy = 상대위치
+            child.moveTo(300,300); //(좌,상)
+            //resize(크기조절) To = 절대 / By = 상대
+            child.resizeTo(w,h);
+            child.document.write("<h2>공지사항</h2>");
+            child.document.write("<p>내일부터 문서 객체 모델(DOM)을 시작</p>");
+            child.document.write("<p>내일부터 개인 홈페이지 개인교습을 시작</p>");
+        }else {
+            alert("팝업 차단을 해제하여 주세요");
+        }
+    </script>
+</head>
+<body>
+    <h1>여기는 메인페이지</h1>
+</body>
+</html>

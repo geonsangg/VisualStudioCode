@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>  
+    <script>
+      /* 자기 자신을 변화하는 메서드 : pop, push, unshift, reverse, sort, splice (자신에게 추가하는 느낌)
+         자기 자신은 변화하지 않는 메서드 : concat, join, slice  (새로운 변수에 넣는 느낌)*/
+
+      let fruits1 = ['바나나','사과','참외','딸기','메론'];
+      let newFruits = fruits1.slice(2); // 2번재부터 끝까지 가져온다.
+      console.log(newFruits);
+
+      let sFruits = fruits1.slice(1,4); // 1번째부터 4번째까지 가져온다.
+      console.log(sFruits);
+
+      let nums = [56,78,20,96,74];
+      nums.sort(); // 오름차순 정렬
+      console.log(nums);
+
+      fruits1.reverse(); //배열 순서 뒤집기
+      console.log(fruits1);
+    </script>
+</head>
+<body>
+  
+</body>
+</html>

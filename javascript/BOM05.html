@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저 객체 모델(Browser Object Model)</title>  
+    <script>
+        //navigator = 현재 브라우저의 정보
+        for(let key in navigator) {
+            document.write("▦" + key + " : " + navigator[key] + "<br>");
+        }
+        history.back(); // 이전페이지
+        history.forward(); // 다음페이지
+        history.go(-1); // -1 = 이전페이지, -2 = 이전의이전페이지, 1 = 다음페이지
+    </script>
+</head>
+<body>
+    <h1>길동이의 홈페이지</h1>
+</body>
+</html>

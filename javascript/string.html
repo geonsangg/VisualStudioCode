@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String 내장객체의 메서드</title>  
+    <script>
+      //let str = "대한민국";
+      //let str = new String("대한민국");
+      let str = "computer";
+      let ch = str.charAt(2); //2번째 문자를 넣는다.
+      let str1 = "hello thank you good luck you";
+      let pos1 = str1.indexOf("you"); //문장의 위치를 찾는다.
+      let pos2 = str1.indexOf("you",16); //시작위치(16) 부터 문장의 위치를 찾는다.
+      let pos3 = str1.indexOf("java"); //찾지 못하면 -1
+
+      let pos4 = str1.lastIndexOf("you"); //뒤에서 부터 찾는다. (세는 위치는 앞에서부터)
+      let pos5 = str1.lastIndexOf("you",25); // 뒤에서 25번째부터 앞으로 가면서 찾는다.
+
+      let str2 = str1.match("you"); // str1에 you가 있으면 str2에 you를 넣어준다. 없으면 null
+      
+      let str3 = "지금은 html 공부중";
+      let str4 = str3.replace("html","javascript"); // html 을 javascript 로 바꿔준다.
+      alert(str4);
+    </script>
+</head>
+<body>
+  
+</body>
+</html>
