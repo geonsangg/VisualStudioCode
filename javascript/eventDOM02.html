@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트로 DOM을 제어</title> 
+    <style>
+        #rect {
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+            margin-left: 100px;
+            transition: 1s;
+        }
+    </style> 
+    <script>
+        let pic;
+       window.onload = function () {
+        pic = document.querySelector("#pic");
+        let myRect = document.querySelector("#rect");
+        //이벤트를 추가(여러개도 가능) mouseover = 마우스를 올려두면 out은 벗어나면
+        pic.addEventListener("mouseover",changePic);
+        pic.addEventListener("mouseout", originPic);
+        myRect.addEventListener("mouseover", function () {
+            this.style.backgroundColor = "green";
+            this.style.borderRadius = "50%";
+        });
+        myRect.addEventListener("mouseout", function () {
+            this.style.backgroundColor = "";
+            this.style.borderRadius = "";
+        });
+       }
+       function changePic () {
+        pic.src = "images/boy.png";
+       }
+       function originPic () {
+        pic.src = "images/girl.png";
+       }
+    </script>
+</head>
+<body>
+   <img src="images/girl.png" alt="gitl" id="pic">
+   <div id="rect"></div>
+</body>
+</html>

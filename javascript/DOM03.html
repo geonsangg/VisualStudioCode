@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델(Document Object Model) - 생성2</title>  
+    <script>
+        window.onload = function () {
+           let output = "<h2>오늘의 메뉴</h2>"
+           output += "<ul>";
+           output += "<li>김치찌개</li>";
+           output += "<li>돈까스</li>";
+           output += "<li>부대찌개</li>";
+           output += "</ul>";
+           //innerHTML = 앞에 선택자 안에 있는 HTML들
+           document.body.innerHTML += output;
+        }
+    </script>
+</head>
+<body>
+    <h1>자바스크립트</h1>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델(Document Object Model)</title>  
+    <script>
+        //웹 문서의 모든 요소를 자바스크립트를 이용하여 조작할 수 있도록 객체를 사용해 문서를 다루는 방법
+        window.onload = function () {
+            let header = document.querySelector("#head");
+            // 모든 태그 요소 = 객체
+            //alert(typeof(header));
+            setTimeout(function () {
+                header.innerHTML = "DOM을 배우기 시작!!";
+                header.style.color = "red";
+            },3000);
+        }
+       
+    </script>
+</head>
+<body>
+    <h1 id="head">자바스크립트</h1>
+</body>
+</html>

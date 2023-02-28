@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델(Document Object Model) - 테스트</title>  
+    <style>
+        h3 {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        let onoff = false;
+        let detail;
+        window.onload = function () {
+           detail=document.querySelector("#contents .detail");
+           detail.style.visibility = "hidden";
+        }
+        function showHide() {
+            onoff=!onoff;
+            if(onoff) {
+                detail.style.visibility = "visible";
+            }else {
+                detail.style.visibility = "hidden";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="contents">
+        <h2>상품정보</h2>
+        <ul>
+            <li>상품명 : 휴대용 손난로</li>
+            <li>가격 : 20,000원</li>
+            <li>제조사 : 가나전자</li>
+        </ul>
+        <h3 onclick="showHide()">상품 상세 설명</h3>
+        <p class="detail">
+            휴대용 손난로 제품은 추운 겨울 필수품으로 손난로 + 보조배터리로 함께 사용됩니다.
+        </p>
+    </div>
+</body>
+</html>

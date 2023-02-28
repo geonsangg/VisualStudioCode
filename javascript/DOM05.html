@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델(Document Object Model) - 수정2</title>  
+    <script>
+        window.onload = function () {
+            let contents = ["반갑습니다","문서객체모델"]
+            /*속성이 유일하지 않기에 위에부터 배열로 0부터 순서대로 매겨진다.
+
+            태그 이름이 h1인것 (태그네임은 잘 사용하지 않는다.)
+            let head = document.getElementsByTagName("h1");
+
+            클래스이름이 header인것
+            let head = document.getElementsByClassName("header");
+
+            태그 h1 모두를 배열처럼 가져온다
+            let head = document.querySelectorAll("h1");*/
+
+            //.을 찍지 않으면 태그로 인식하기에 클래스를 사용할떄는 꼭 . 을 사용해야한다.
+            let head = document.querySelectorAll(".header");
+
+            //너무 많으면 줄이 길어지기에 넣을 내용을 배열에 넣고 사용하면 더 편할 수 있음
+            for(let i=0; i<head.length; i++) {
+                head[i].innerHTML = contents[i];
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 class="header">안녕하세요</h1>
+    <h1 class="header">브라우저객체모델(BOM)</h1>
+</body>
+</html>

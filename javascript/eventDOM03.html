@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트로 DOM을 제어</title>     
+    <script>
+        /* 나의 답
+        let countA = 0;
+        let countB = 0;
+       window.onload = function () {
+       let btnA = document.querySelector("#buttonA");
+       let btnB = document.querySelector("#buttonB");
+       btnA.onclick = function () {
+        countA++;
+        let count = document.querySelector("#countA");
+        count.innerHTML = countA;
+       }
+       btnB.onclick = function () {
+        countB++;
+        let count = document.querySelector("#countB");
+        count.innerHTML = countB;
+       }
+       }*/
+       //선생님 답
+       window.onload = function () {
+        let btnA = document.querySelector("#buttonA");
+        let btnB = document.querySelector("#buttonB");
+        let cntA = document.querySelector("#countA");
+        let cntB = document.querySelector("#countB");
+        btnA.onclick = function () {
+            cntA.innerHTML=Number(cntA.innerHTML)+1;
+        }
+        btnB.onclick = function () {
+            cntB.innerHTML=Number(cntB.innerHTML)+1;
+        }
+       }
+    </script>
+</head>
+<body>
+   <button id="buttonA">김철수 투표</button>
+   <button id="buttonB">홍길동 투표</button>
+   <h1>김철수 - <span id="countA">0</span></h1>
+   <h1>홍길동 - <span id="countB">0</span></h1>
+</body>
+</html>

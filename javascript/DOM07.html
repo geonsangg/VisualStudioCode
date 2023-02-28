@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델(Document Object Model) - 테스트</title>  
+    <script>
+       window.onload = function () {
+        //let head = document.getElementById("header"); (고전방식)
+        let head = document.querySelector("#header");
+        head.style.border = "2px solid red";
+        head.style.color = "orange";
+        /*        여기에 - 는 빼기로 인식한다.
+        head.style.background-color = "yellow";*/
+        // - 를 빼고 뒤에 맨 앞글자를 대문자로 사용해야한다.
+        head.style.backgroundColor = "yellow";
+        let del = document.getElementById("willRemove");
+        //removeChild = 제거
+        document.body.removeChild(del);
+       }
+    </script>
+</head>
+<body>
+    <h1 id="header">자바스크립트</h1>
+    <h1 id="willRemove">코로나 곧 사라짐</h1>
+</body>
+</html>

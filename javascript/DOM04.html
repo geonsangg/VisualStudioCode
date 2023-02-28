@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델(Document Object Model) - 수정</title>  
+    <script>
+        window.onload = function () {
+            /*getElement = 이미 생성되어 있는걸 가져오는 것
+           let head1 = document.getElementById("head1");
+           let head2 = document.getElementById("head2");*/
+           
+           //querySelector() = 선택한다는 의미 (아이디를 넣고싶으면 #아이디 or div>#ab 이런식으로도 폭 넓게 사용가능)
+           let head1 = document.querySelector("#head1");
+           let head2 = document.querySelector("#head2");
+           head1.innerHTML = "반갑습니다.";
+           head2.innerHTML = "문서객체모델(DOM)";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="head1">안녕하세요</h1>
+    <h1 id="head2">브라우저객체모델(BOM)</h1>
+</body>
+</html>
