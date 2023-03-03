@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체 모델 응용</title>
+    <script>
+        window.onload =function () {
+            let check=document.querySelector("#shippingInfo");
+            check.addEventListener("click",function(){
+                if(this.checked==true){
+                    /*document.querySelector("#shippingName").value=document.querySelector("#billingName").value;
+                    document.querySelector("#shippingTel").value=document.querySelector("#billingTel").value;
+                    document.querySelector("#shippingAdder").value=document.querySelector("#billingAdder").value;*/
+                    document.ship.shippingName.value=document.order.billingName.value;
+                    document.ship.shippingTel.value=document.order.billingTel.value;
+                    document.ship.shippingAdder.value=document.order.billingAdder.value;
+                }else{
+                    /*document.querySelector("#shippingName").value="";
+                    document.querySelector("#shippingTel").value="";
+                    document.querySelector("#shippingAdder").value="";*/
+                    document.ship.shippingName.value="";
+                    document.ship.shippingTel.value="";
+                    document.ship.shippingAdder.value="";
+                }
+            })
+        }
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul{
+            list-style: none;
+        }
+        legend{
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        form{
+            width: 530px;
+            height: auto;
+            padding-left: 10px;
+            margin: 50px auto;
+        }
+        fieldset {
+            border: 1px solid #c0c0c0;
+            padding: 30px 20px 30px 30px;
+            margin-bottom: 35px;
+        }
+        .field{
+            float: left;
+            width: 60px;
+            font-weight: bold;
+            font-size: 0.8em;
+            line-height: 55px;
+            text-align: center;
+            margin-right: 15px;
+        }
+        .input-box{
+            width: 350px;
+            height: 35px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            margin: 10px 0;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form name="order">
+            <fieldset>
+                <legend>주문정보</legend>
+                <ul>
+                    <li>
+                        <label for="billingName" class="field">이름 : </label>
+                        <input type="text" class="input-box" id="billingName" name="billingName">
+                    </li>
+                    <li>
+                        <label for="billingTel" class="field">전화번호 : </label>
+                        <input type="text" class="input-box" id="billingTel" name="billingTel">
+                    </li>
+                    <li>
+                        <label for="billingAdder" class="field">주소 :</label>
+                        <input type="text" class="input-box" id="billingAdder" name="billingAdder">
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+        <form name="ship">
+            <fieldset>
+                <legend>배송정보</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="shippingInfo" name="shippingInfo">
+                        <label for="shippingInfo" class="check">주문 정보와 배송정보가 일치</label>
+                    </li>
+                    <li>
+                        <label for="billingName" class="field">이름 : </label>
+                        <input type="text" class="input-box" id="shippingName" name="shippingName">
+                    </li>
+                    <li>
+                        <label for="shippingTel" class="field">전화번호 : </label>
+                        <input type="text" class="input-box" id="shippingTel" name="shippingTel">
+                    </li>
+                    <li>
+                        <label for="shippingAdder" class="field">주소 :</label>
+                        <input type="text" class="input-box" id="shippingAdder" name="shippingAdder">
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

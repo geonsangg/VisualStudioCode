@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //전역변수,지역변수
+        let hap;
+        function sum(num1,num2){
+            hap=num1+num2;
+        }
+        function minus(num3,num4){
+            return num3-num4;
+        }
+        function product(num5,num6){
+            let result2=num5*num6;
+        }
+        /*closer 1.지역변수를 남겨두는 현상
+                2.함수안에서 생성된 공간
+                3.함수에서 리턴되는 함수 자체
+                4.살아남은 지역 변수
+                5.외부에서 생성자 함수의 변수에 직접 접근을 제한
+                자바스크립트는 함수자체를 변수에 넣을 수 있따.*/
+        sum(10,20);
+        console.log(hap);
+        let result=(minus(100,20));
+        console.log(result);
+        product(5,3);
+        console.log(result2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

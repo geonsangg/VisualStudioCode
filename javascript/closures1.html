@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function Person(name){
+            // 속성=매개변수
+            this._name=name;
+        }
+        Person.prototype.say = function(){
+            console.log(this._name + "님 안녕하세요");
+        }
+        let chulsu=new Person("철수");
+        let gildong=new Person("길동");
+        let younghee=new Person("영희");
+        chulsu.say();
+        gildong.say();
+        younghee.say();
+        //필드에 영표넣기
+        chulsu._name="영표";
+        chulsu.say();
+        //closer 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

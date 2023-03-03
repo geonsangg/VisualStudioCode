@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let stop;
+        stop = setInterval (function () {
+            alert("3초가 지났습니다.");
+        },3000);
+        function astop () {
+            clearInterval(stop);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="astop()">중지</button>
+</body>
+</html>

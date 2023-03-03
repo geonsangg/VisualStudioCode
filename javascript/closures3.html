@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+       /* let i;
+        for(i=1;i<=10;i++){
+            setTimeout(function(){
+                console.log(i);
+            },100)   
+        }*/
+        let i;
+        for(i=1;i<=10;i++){
+           (function (i){
+            setTimeout(function(){
+                console.log(i);
+            },100);
+            //i라는 변수 자체가 타임아웃에 값을 넘겨줌
+           })(i);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

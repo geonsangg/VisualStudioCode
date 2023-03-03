@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체 모델 응용</title>
+    <script>
+        window.onload =function () {
+            let selectMenu=document.querySelector("#class");
+            selectMenu.addEventListener("change",function(){
+                let text=this.options[this.selectedIndex].innerText;
+                alert("[" + text + "]를 선택하셨습니다.");
+            });
+            //let selectMenu=document.testForm.class;
+        }
+    </script>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <form name="testForm">
+        <p>
+            <label>학과</label>
+            <select name="class" id="class">
+                <option value="archi">건축공학과</option>
+                <option value="mechanic">기계공학과</option>
+                <option value="indust">산업공학과</option>
+                <option value="elec">전기전자공학과</option>
+                <option value="computer">컴퓨터공학과</option>
+                <option value="chemical">화학공학과</option>
+            </select>
+        </p>
+    </form>
+</body>
+</html>

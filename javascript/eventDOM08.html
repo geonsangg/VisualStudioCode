@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체 모델 응용</title>
+    <script>
+        window.onload = function(){
+            let head=document.querySelector("#head");
+            //단한번의 클릭만 허용함
+            head.addEventListener("click",hello);
+            function hello(){
+                alert("안녕하세요");
+                head.style.color="#ccc";
+                head.style.cursor="default";
+                this.removeEventListener("click",hello);
+            }
+        }
+    </script>
+    <style>
+        h1{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head">인사하기</h1>
+</body>
+</html>

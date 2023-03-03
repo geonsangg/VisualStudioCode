@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function person(name){
+            let _name=name;
+            return function(){
+                conlose.log(_name + "님 안녕하세요");
+            }
+        }
+        let chulsu=person("철수");
+        let gildong=person("길동");
+        let younghee=person("영희");
+        //_name은 지역변수라 접근불가 안찍힘
+        chulsu._name="영표";
+    </script>
+</head>
+<body>
+      
+</body>
+</html>
