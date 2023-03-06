@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script> 
+       $(function () {
+        /*$('h1').css('background','yellow');
+        $('h1:even').css('color','red');
+        $('h1:odd').css('color','blue');*/
+
+        /*filter 뒤에 또 filter가 오면 처음 필터링 된 것에서 필터하는것 
+        즉. 처음 filter 로 전체중 even 짝수번째(0,2,4)를 red로 하고 필터된 (0,2,4)중에서 odd 홀수번째 (2)만 blue가 되는것
+        $('h1').css('background','yellow').filter(':even').css('color','red').filter(':odd').css('color','blue');*/
+
+        //end() 메서드 한단계 뒤로 되돌리는것 전체중 짝수번째를 red로 하고 되돌려서 다시 전체중 홀수번째를 blue로 
+        $('h1').css('background','yellow').filter(':even').css('color','red').end().filter(':odd').css('color','blue');
+       });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메서드</h1>
+    <h1>제이쿼리 이벤트</h1>
+    <h1>제이쿼리 애니메이션(효과)</h1>
+    <h1>제이쿼리 실무응용</h1>
+    <h1>제이쿼리 플러그인</h1>
+</body>
+</html>

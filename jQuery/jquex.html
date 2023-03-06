@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+       /* window.onload = function () {
+            let head = document.querySelectorAll("h1");
+            for(let i=0; i<head.length; i++) {
+                head[i].onclick = function () {
+                    this.style.color = "red";
+                    this.innerHTML= "코로나 퇴치 완료";
+                }
+            }
+        }*/
+        //(문서가).준비되면(함수를 실행)
+        $(document).ready(function() {
+            $("h1").click (function () {
+                //css = style ,  html = innerHTML
+                $(this).css("color","red").html("코로나 퇴치 완료");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>서울 코로나 바이러스</h1>
+    <h1>경기 코로나 바이러스</h1>
+    <h1>인천 코로나 바이러스</h1>
+</body>
+</html>

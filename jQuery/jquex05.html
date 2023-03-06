@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+       $(function () {
+        //even = 짝수 odd = 홀수
+        //$('li:odd').css('background','green');
+        $("li:first").css('background','green');
+        $("li:last").css('background','gray');
+        $("tr:odd").css("background","#faed7d");
+        $("tr:even").css("background","#ffd9ec");
+        //제일 밑에 쓴 이유는 위에 짝수번째에서 색을 바꾼 후 바꿔주기 위해서
+        $("tr:first").css("background","#000").css('color',"#fff");
+       });
+    </script>
+</head>
+<body>
+    <h2>동물의 세계</h2>    
+    <ul>
+        <li>사자</li>
+        <li>코끼리</li>
+        <li>표범</li>
+        <li>거북이</li>
+        <li>기린</li>
+        <li>악어</li>
+        <li>원숭이</li>
+    </ul>
+    <h2>혈액형 조사</h2>
+    <table>
+        <tr><th>이름</th><th>혈액형</th><th>지역</th></tr>
+        <tr><td>김철수</td><td>O형</td><td>서울시 용산구</td></tr>
+        <tr><td>이영희</td><td>A형</td><td>서울시 중구</td></tr>
+        <tr><td>홍길동</td><td>AB형</td><td>서울시 영등포구</td></tr>
+        <tr><td>이영표</td><td>B형</td><td>서울시 강남구</td></tr>
+        <tr><td>박찬호</td><td>A형</td><td>서울시 종로구</td></tr>
+        <tr><td>손흥민</td><td>O형</td><td>서울시 노원구</td></tr>
+    </table>
+</body>
+</html>

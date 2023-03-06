@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        .high_light0 {
+            background-color: yellow;
+        }
+        .high_light1 {
+            background-color: orange;
+        }
+        .high_light2 {
+            background-color: cyan;
+        }
+        .high_light3 {
+            background-color: greenyellow;
+        }
+        .high_light4 {
+            background-color: beige;
+        }
+        .high_light5 {
+            background-color: gray;
+        }
+    </style>
+    <script>       
+    //모든 메서드는 index를 가질 수 있다. 단, 이벤트형 메서드는 제외
+       $(function () {
+        let index;
+        $('h1').hover(function () {
+            index = $(this).index(); //index() = 인덱스를 가져오는 메서드
+            $(this).addClass('high_light' + index);
+        }, function () {
+            $(this).removeClass('high_light' + index);
+        })
+       });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메서드</h1>
+    <h1>제이쿼리 이벤트</h1>
+    <h1>제이쿼리 애니메이션(효과)</h1>
+    <h1>제이쿼리 실무응용</h1>
+    <h1>제이쿼리 플러그인</h1>
+</body>
+</html>

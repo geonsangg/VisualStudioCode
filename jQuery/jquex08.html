@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+       $(function () {
+        let memo = ['화창한 날씨입니다.','월요일입니다.','메서드 배우는 수업'];
+        let index;
+        $('h1').click(function () {
+            index = $(this).index();
+            $(this).html(memo[index]);
+        });
+       });
+    </script>
+</head>
+<body>
+    <h1>오늘의 날씨는?</h1>
+    <h1>오늘은 무슨요일?</h1>
+   <h1>자바스크립트 무슨 수업?</h1>
+</body>
+</html>

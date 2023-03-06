@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+       $(function () {
+        $("h1").hover(function () {
+            $(this).css({
+                //객체로 (같은 메서드가 반복되면 객체로 사용하는게 편하다)
+                color : "red",
+                background : "yellow",
+                border : "3px solid blue"
+            });
+        } ,function () {
+            //메서드체인(밑에처럼 말고 다른 메서드가 여러개 올때 사용하는게 좋다)
+            $(this).css("color","black").css("background","white").css("border","none");
+        });
+       });
+    </script>
+</head>
+<body>
+    <h1>html5 - 홈페이지 뼈대</h1>
+    <h1>css - 스타일과 레이아웃</h1>
+    <h1>javascript - 정적인 홈페이지를 동적으로 제어</h1>
+</body>
+</html>

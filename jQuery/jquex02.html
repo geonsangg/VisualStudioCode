@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        /* $(선택자).메서드(); */
+        //(document).ready = 생략가능
+       $(function () {
+            //$("*").css("color","blue");
+            //$("p").css("backgroundColor","yellow");
+            /*$("#target").css("border","1px solid");
+            $(".item").css("color","red");
+            $(".select").css("background","yellow");*/
+            //$(".item.select").css("color","blue");
+            //p태그중 class가 item인것
+            //$("p.item").css("color","green");
+            //모든 h1 과 p
+            //$("h1,p").css("color","blue");
+            //hover(함수1, 함수2); 마우스를 올리면 함수1 , 마우스가 떠나면 함수2 수행
+            $("p").hover(function () {
+                $(this).css("color","red");                
+            }, function () {
+                $(this).css("color","black");
+            });
+       });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 시작</h1>
+    <p class="item select">자바스크립트로 만들어진 라이브러리</p>
+    <ul>
+        <li>선택자</li>
+        <li>메서드</li>
+        <li>이벤트</li>
+        <li class="select">애니메이션</li>
+        <li>플러그인</li>
+        <li>dmddydrltnf</li>
+    </ul>
+    <p id="target">개인 홈페이지 제작중...</p>
+    <p>html, css, javascript</p>
+</body>
+</html>

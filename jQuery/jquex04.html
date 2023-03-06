@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+       $(function () {
+        //$("#box1 > h2").css("color","red");
+        //$("#box2 > p").css("color","red");
+        $("#box2 p").css("color","red");
+        setTimeout(function () {
+                    //selected = 선택된것  .val() = select에서 올라온 값
+            let choice = $("select>option:selected").val();
+            alert("오늘저녁은 " + choice + "(으)로 선택하셨습니다.")
+        },5000);
+       });
+    </script>
+</head>
+<body>
+    <div id="box1">
+        <h2>나는 제목1</h2>
+        <p>자식 선택자 공부</p>
+    </div>
+    <div id="box2">
+        <h2>나는 제목2</h2>
+        <p>후손 선택자 공부</p>
+        <div>
+            <p>나는 손자</p>
+        </div>
+    </div>
+    <select>
+        <option>김치찌개</option>
+        <option>부대찌개</option>
+        <option>비빔밥</option>
+        <option>칼국수</option>
+        <option>냉면</option>
+    </select>
+</body>
+</html>

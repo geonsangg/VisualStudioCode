@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script> 
+       $(function () {
+        //add() 추가.
+        //h1 = background,border    p태그는 중간에 추가해서 border만
+            $('h1').css('background','yellow').add('p').css('border','2px solid red');
+       });
+    </script>
+</head>
+<body>
+    <h1>html5</h1>
+    <p>홈페이지 제작 뼈대</p>
+    <h1>css3</h1>
+    <p>홈페이지를 꾸미고 레이아웃</p>
+    <h1>javascript</h1>
+    <p>정적인 홈페이지를 동적으로 제작</p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+       $(function () {
+        //eq = 같은거 (번째) 마지막부터 -1 -2 도 가능하다 
+       // $('li:eq(0)').css('color','red');
+
+       // gt(보다) 큰것  gt = >  따라서 li>3
+       // $('li:gt(3)').css('color','red');
+
+       // lt(보다) 작은것  lt = <  따라서 li<3 
+      // $('li:lt(3)').css('color','red');
+
+      //contains = () 안에를 표함한 것들
+      //$('li:contains(표범)').css('background','yellow');
+        
+      //등차수열만드는것 (2n) = 2번째 4번째 6번째 8번째 ~~ //단. 위치가아니라 자식을 세주는것 1부터 시작
+      $('li:nth-child(2n)').css('color','red');
+      $('li:nth-child(2n+1)').css('color','blue');
+      $('tr:eq('+ [i] +')').css({
+        color:'#fff',
+        background:'#000'
+      });
+      $('td:nth-child(3n+1)').css('background','aqua');
+      $('td:nth-child(3n+2)').css('background','orange');
+      $('td:nth-child(3n)').css('background','gray');
+       });
+    </script>
+</head>
+<body>
+    <h2>동물의 세계</h2>    
+    <ul>
+        <li>사자</li>
+        <li>코끼리</li>
+        <li>표범</li>
+        <li>거북이</li>
+        <li>기린</li>
+        <li>악어</li>
+        <li>원숭이</li>
+    </ul>
+    <h2>혈액형 조사</h2>
+    <table>
+        <tr><th>이름</th><th>혈액형</th><th>지역</th></tr>
+        <tr><td>김철수</td><td>O형</td><td>서울시 용산구</td></tr>
+        <tr><td>이영희</td><td>A형</td><td>서울시 중구</td></tr>
+        <tr><td>홍길동</td><td>AB형</td><td>서울시 영등포구</td></tr>
+        <tr><td>이영표</td><td>B형</td><td>서울시 강남구</td></tr>
+        <tr><td>박찬호</td><td>A형</td><td>서울시 종로구</td></tr>
+        <tr><td>손흥민</td><td>O형</td><td>서울시 노원구</td></tr>
+    </table>
+</body>
+</html>
