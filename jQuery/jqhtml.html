@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script> 
+       $(function () {
+         let ht = [' 화창합니다.',' 화요일 입니다.',' 제이쿼리'];
+         let index;
+         $('h1').click(function () {
+          index = $(this).index();
+          $(this).html($(this).html() + ht[index]);
+       });
+        let dv = ['제이쿼리 선택자', '제이쿼리 메서드', '제이쿼리 이벤트'];
+        $('div').html(function (index) {
+          return '<h1>' + dv[index] + '</h1>';
+        });
+       });
+    </script>
+</head>
+<body>
+    <h1>오늘의 날씨는?</h1>
+    <h1>오늘은 무슨 요일?</h1>
+    <h1>지금 배우는 과목은?</h1>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

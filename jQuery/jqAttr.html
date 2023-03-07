@@ -7,12 +7,26 @@
     <script src="js/jquery-3.6.3.min.js"></script>
     <script> 
        $(function () {
-            //$(선택자).attr(내용) attr=속성을 바꾸는 메서드 예시: img에 src,alt /a에 href 같은 속성들
-            $('img').attr('width',500);
+         //$(선택자).attr(내용) attr=속성을 바꾸는 메서드 예시: img에 src,alt /a에 href 같은 속성들
+         /*속성 이름만 적으면 속성이름이 가지고 있는 원래의 값을 변수에 넣는다.
+            let src=$('img').attr('src');
+            alert(src);*/      
+            let c=$('h1').css('color');
+            alert(c); //rgb(0,0,0) 으로 나온다
+
+             //속성 이름과 값을 적으면 적은 값으로 변경한다.
+            //$('img').attr('width',500);
+            $('img').attr({
+                width: function(index) {
+                    return (index+1) * 100;
+                },
+                height : 100
+            });
        });
     </script>
 </head>
 <body>
+    <h1>자바스크립트</h1>
     <img src="images/Koala.jpg" alt="Koala">
     <img src="images/Penguins.jpg" alt="Penguins">
     <img src="images/Lighthouse.jpg" alt="Lighthouse">

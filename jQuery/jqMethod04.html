@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script> 
+       $(function () {
+          /*let co = $('h1').css('color');
+          alert(co);*/
+          let color = ['red','green','blue'];
+          /*$('h1').css('background','yellow').css('color',function(index){
+            return color[index];
+          });*/
+          $('h1').css({
+            color: function(index){
+            return color[index];
+          },
+          backgroundColor : 'yellow',
+          border : function (index) {
+            return '3px solid ' + color[2-index];
+          }
+        });
+        $('h1').click(function () {
+            //html() = <h1> 여기를 가르킨다 </h1> 태그 사이
+            /*let memo = $(this).html();
+            alert(memo);*/
+            $(this).text('지금 배우는 중');
+        });
+        //html = 태그를 인식, text = 태그를 인식하지 않고 쓴 그대로 텍스트로 넣음
+        //$('#box').html('<h1>오늘은 화요일</h1>');
+        $('#box').text('<h1>오늘은 화요일</h1>');
+       });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메서드</h1>
+    <h1>제이쿼리 이벤트</h1>
+    <div id="box">
+        
+    </div>
+</body>
+</html>

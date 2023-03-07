@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script> 
+       $(function () {
+        $('img').click(function () {
+         //removeAttr 속성을 제거하는 메서드
+            $(this).removeAttr('width');
+        });
+       });
+    </script>
+</head>
+<body>
+  <img src="images/Koala.jpg" alt="Koala" width="200">
+</body>
+</html>

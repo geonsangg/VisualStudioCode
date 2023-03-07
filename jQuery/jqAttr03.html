@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+      div {
+         width: 600px;
+         height: 700px;
+         border: 3px solid;
+         display: inline-block;
+         background-color: #000;
+         text-align: center;
+      }
+      div img {
+         opacity: 0;
+      }
+      .sw {
+         vertical-align: bottom;
+      }
+    </style>
+    <script> 
+       $(function () {
+         let sw = false;
+         $('.sw').click(function () {
+            sw=!sw;
+            if(sw) {
+               $(this).attr('src','images/light-switch.png');
+               $('div').css('background','#fff');
+               $('div img').css('opacity',1);
+            }else {
+               $(this).attr('src','images/light-switch1.png');
+               $('div').css('background','#000');
+               $('div img').css('opacity',0);
+            }
+         });
+       });
+    </script>
+</head>
+<body>
+   <div>
+      <img src="images/귀신.jpg" alt="goast">
+   </div>
+   <img class="sw" src="images/light-switch1.png" alt="light-switch1">
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+      #carColor {
+        width: 375px;
+        text-align: center;
+      }
+      #carColor > p {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        cursor: pointer;
+      }
+      #carColor > p:nth-Child(1) {
+        background-color: greenyellow;
+        border: 3px solid;
+      }
+      #carColor > p:nth-child(2) {
+        background-color: purple;
+      }
+      #carColor > p:nth-child(3) {
+        background-color: red;
+      }
+    </style>
+    <script> 
+       $(function () {
+        let co = ['green', 'purple', 'red'];
+        let index;
+        $('p').click(function () {
+          index = $(this).index();
+          $('p').css('border','none');
+          $(this).css('border','3px solid');
+          $('.mycar').attr('src','images/car_' + co[index] +'.jpg');
+        });
+       });
+    </script>
+</head>
+<body>
+  <img class="mycar" src="images/car_green.jpg" alt="car">
+  <div id="carColor">
+    <p></p>
+    <p></p>
+    <p></p>
+  </div>
+</body>
+</html>

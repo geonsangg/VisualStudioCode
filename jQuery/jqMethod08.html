@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script> 
+       $(function () {
+        //parent() 부모
+        //$('.list3').parent().css('border','2px solid red');
+        //parents() 부모의 부모의 부모(모든 부모) 전부
+        //$('.list3').parents().css('border','2px solid red');
+        //closest() 가장 가까운 ()인부모
+        //$('.list3').closest('div').css('border','2px solid red');
+        let index;
+        let color = ['yellow','red','green','pink','orange'];
+        $('a').click(function () {
+          //a의 부모는 li이기때문에 a의 인덱스는 다 0이다. 따라서 부모 li의 인덱스를 가져와야한다.
+          index = $(this).parent().index();
+          $(this).css('background',color[index]);
+        });
+        //children() 자식들
+        $('#box1>section').children().css({
+            color : 'red',
+            background : 'yellow',
+            border : '2px solid blue'
+        });
+        //next() 형제들중 다음번째
+        //$('.list3').next().css('border','2px solid red');
+        //nextAll() 형제들중 다음부터 끝까지
+        //$('.list3').nextAll().css('border','2px solid red');
+        //prev() 형제들중 전번째
+        //$('.list3').prev().css('border','2px solid red');
+        //prevAll() 형제들중 전번째 부터 처음까지
+        //$('.list3').prevAll().css('border','2px solid red');
+        //nextUntil() = 선택자부터 nextUntil() 괄호안에 선택자가 나오기 전까지
+        //$('#box1>h1').nextUntil('p').css('border','2px solid red');
+        //sibiling() 나를 제외한 형제들
+        //$('.list3').siblings().css('border','2px solid red');
+        //find() 선택자 안에서 괄호안을 찾는다.
+        // $('#box1').find('.list3').css('border','2px solid red');
+        // :only-child = 외동인것
+        $('li:only-child').css('border','2px solid red');
+       });
+    </script>
+</head>
+<body>
+  <div id="box1">
+      <h1>메서드 형태 선택자</h1>
+      <ul>
+        <li><a href="#">리스트1</a></li>
+        <li><a href="#">리스트2</a></li>
+        <li class="list3"><a href="#">리스트3</a></li>
+        <li><a href="#">리스트4</a></li>
+        <li><a href="#">리스트5</a></li>
+      </ul>
+      <p>나는 단락</p>
+      <section>
+        <h2>나는 섹션 제목</h2>
+        <p>나는 섹션 단락</p>
+      </section>
+      <ul>
+        <li>외동</li>
+      </ul>
+  </div> 
+</body>
+</html>

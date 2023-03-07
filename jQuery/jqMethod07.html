@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 라이브러리</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script> 
+       $(function () {
+        //remove() = 삭제
+          //$('h1').first().remove();
+          //empty() = 안을 비운다. div는 남아있음
+        $('#box1').empty();
+        $('#box2>h1').html(function (index, html) {
+          return '★' + html + '★';
+        });
+       });
+    </script>
+</head>
+<body>
+  <div id="box1">
+    <h1>나는 곧 제거됨</h1>
+    <h1>제이쿼리 메서드</h1>
+  </div> 
+  <div id="box2">
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메서드</h1>
+    <h1>제이쿼리 이벤트</h1>
+  </div>
+</body>
+</html>

@@ -7,15 +7,24 @@
     <script src="js/jquery-3.6.3.min.js"></script>
     <script> 
        $(function () {
+         let index;
+         let onimg = ['images/box2.png','images/lightbulb.png','images/웃는사람.png'];
+         //let outimg = ["images/box1.png","images/lightbulb1.png","images/우는사람.png" ]
+         let outimg;
          $('img').hover(function () {
-            $(this).attr('src','images/box2.png');
+            index = $(this).index()
+            outimg = $(this).attr('src');
+            $(this).attr('src',onimg[index]);
          }, function() {
-            $(this).attr('src','images/box1.png');
+            //$(this).attr('src',outimg[index]);
+            $(this).attr('src',outimg);
          });
        });
     </script>
 </head>
 <body>
    <img src="images/box1.png" alt="box1">
+   <img src="images/lightbulb1.png" alt="lightbulb1">
+   <img src="images/우는사람.png" alt="cryingMan">
 </body>
 </html>
