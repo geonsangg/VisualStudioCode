@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체생성</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script> 
+       $(function () {
+        //$(A).appendTo(B) : A를 B의 뒷 부분에 추가합니다.
+        //$(A).prependTo(B) : A를 B의 앞 부분에 추가합니다.
+        //$(A).insertAfter(B) : A를 B의 뒤에 추가합니다.
+        //$(A).insertBefore(B) : A를 B의 앞에 추가합니다.
+
+        //h2를 생성해서  뒤에() 에 추가한다.
+        $('<h2>남극팽귄</h2>').appendTo('#festival');
+        $('<img>').attr({
+          src: 'images/Penguins.jpg',
+          width : 500,
+          height : 350,
+          alt : '펭귄'
+        }).appendTo('#festival');
+        $('<p></p>').html('펭귄은 남극에 살며 생선을 주로 먹고').appendTo('#festival');
+        let contents = ['오늘은 수요일입니다.','지금은 문서객체 생성 수업중...','홈페이지 제작을 쭉~~'];
+        for(let i=0; i<contents.length; i++) {
+          $('<p></p>').html(contents[i]).appendTo('#festival');
+        }
+        $('<h1>겨울축제</h1>').prependTo('#festival');
+        $('<h2>나는 어디에 추가될까?</h2>').insertAfter('#festival');
+        $('<h2>나는 외톨이</h2>').insertBefore('#festival');
+       });
+    </script>
+</head>
+<body>
+  <h1>문서객체생성</h1>
+  <div id="festival">
+
+  </div> 
+</body>
+</html>

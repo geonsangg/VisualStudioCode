@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체생성</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script> 
+       $(function () {
+          let title = '<h2>겨울축제</h2>';
+          let sub = '<p>이번 축제에는 코로나로 인하여 인원 제한이 있습니다.</p>';
+          //(A).append(B); B를 A뒤에 추가한다. 
+          $('#festival').append(title,sub);
+          let contents= [
+            {name : '김철수', address : '서울시 종로구'},
+            {name : '이영희', address : '서울시 영등포구'},
+            {name : '홍길동', address : '서울시 강남구'}
+          ];
+          $('#addr>div').append(function (index) {
+              let item = contents[index];
+              let output = '';
+              output += '<h2>' + item.name + '</h2>';
+              output += '<p>' + item.address + '</p>';
+              return output;
+          }).css({
+            border : '1px solid blue',
+            marginBottom : '10px'
+          });
+          $('#addr>div').hover(function () {
+              $(this).css('background','yellow');            
+          }, function () {
+            $(this).css('background','white');
+          });
+       });
+    </script>
+</head>
+<body>
+  <h1>문서객체생성</h1>
+  <div id="festival">
+
+  </div> 
+  <div id="addr">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

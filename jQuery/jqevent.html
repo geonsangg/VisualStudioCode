@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체생성</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        .reverse {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <script> 
+       $(function () {
+            //on(이벤트이름, 함수) / on메서드 : 이벤트를 연결하는 메서드
+            /*$('h1').on('click',function () {
+                $(this).html(function (index, html) {
+                    return html + '★';
+                });
+            });      */     
+            /*$('h1').on({
+                //mouse가 들어가면
+                mouseenter : function () {
+                    $(this).addClass('reverse');
+                },
+                //mouse가 나오면
+                mouseleave : function () {
+                    $(this).removeClass('reverse');
+                }
+            });*/
+             //hover(mouseenter,mouseleave) 인 것이다
+             /*$('h1').hover(function () {
+                $(this).addClass('reverse');
+            }, function () {
+                $(this).removeClass('reverse');
+            });*/
+            $('h1').on({
+                mouseenter : function () {
+                    $(this).addClass('reverse');
+                },
+                mouseleave : function () {
+                $(this).removeClass('reverse');
+                },
+                click : function () {
+                $(this).html(function (index, html) {
+                    return html + '★';
+                });
+            }
+            });
+       });
+    </script>
+</head>
+<body>
+    <h1>김철수-</h1>
+    <h1>홍길동-</h1>
+</body>
+</html>

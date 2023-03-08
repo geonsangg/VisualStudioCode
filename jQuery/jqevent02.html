@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체생성</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script> 
+       $(function () {
+        /*on 대신 one을 사용하면 이벤트를 1번만 사용한다는 것
+          $('h1').on('click',function () {
+            alert('안녕하세요');
+            //off() = 이벤트를 끊는것
+            $(this).off();
+          });*/
+          let count = 0;
+          $('h1').on('click',function () {
+            count++;
+            if(count == 3) {
+                alert('잘가세요');
+                $(this).off();
+            }
+            alert('안녕하세요');
+          });
+       });
+    </script>
+</head>
+<body>
+    <h1>나를 클릭해보세요</h1>
+</body>
+</html>
