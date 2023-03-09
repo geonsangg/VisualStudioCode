@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+      .news {
+        display: none;
+      }
+    </style>
+    <script> 
+       $(function () {
+        $('.btnNews').click(function () {
+          /*문서 객체를 크게 보여준다.
+          1.$(선택자).show();
+          2.$(선택자).show(speed); 속도
+          3.$(선택자).show(speed, callback); callback = 효과를 모두 완료한 후 실행할 함수를 지정
+          4.$(선택자).show(speed, easing, callback); easing = 가속도 효과 // 
+
+          hide() = 문서객체를 작게하며 사라지게한다.
+          toggle() = show메서드와 hide메서드를 번갈아가며 수행 (먼저 보이고있으면 hide부터 안보이는 상태면 show부터)
+
+         //speed = 'fast'(빠르게), 'normal'(보통) 'slow'(천천히) 숫자(밀리초)
+         $('.news').show(2000 , function () {
+            alert('이상 긴급뉴스였습니다.');
+         });*/
+          //$('.news').hide(2000);
+          $('.news').toggle(2000);
+        });
+      });
+    </script>
+</head>
+<body>
+    <button class="btnNews">뉴스 토글</button>
+    <div class="news">
+        <h2>벼랑 끝 몰린 한국 야구</h2>
+        <p>이강철 감독이 이끄는 한국 야구대표팀은 9일 일본 도쿄돔에서 열린 2023 월드베이스볼클래식(WBC) B조 1라운드 1차전에서 호주에 7-8로 패했다. 한국은 1라운드 통과를 위해 일본을 반드시 이겨야 하는 어려운 상황에 몰렸다. 일본에 마저 패하면 탈락 확정이다.
+        </p>
+    </div>
+</body>
+</html>

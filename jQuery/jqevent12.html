@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script> 
+       $(function () {
+          let baseFont = 16;
+          $('#zoom button').on('click',function () {
+            //hasClass() 클래스이름이 ()인것
+              if($(this).hasClass('zoomout')) {
+                if(baseFont <= 8) return false;
+                  baseFont--;
+              
+              }else if($(this).hasClass('zoomin')) {
+                if(baseFont >= 30) return false;
+                baseFont++;
+              }else {
+                baseFont = 16;
+              }
+              $('.font').text(baseFont + 'px');
+              $('body').css('fontSize',baseFont);
+          }); 
+      });
+    </script>
+</head>
+<body>
+  <p id="zoom">
+      <button class="zoomout">-</button>
+      <button class="base">100%</button>
+      <button class="zoomin">+</button>
+  </p>
+  <p class="font">16px</p>
+  <div id="wrap">
+    9일 통신업계에 따르면 미디어로그는 지난해 IBK기업은행, KC벤처스, KTB네트워크 등 11곳과 함께 영화 ‘범죄도시2’ 공동 제공사로 이름을 올렸다. 제공은 단순 투자를 의미한다. 주요 투자사보다 투자 규모는 작지만 영화 제작에 자금을 댔다는 뜻이다.
+    9일 통신업계에 따르면 미디어로그는 지난해 IBK기업은행, KC벤처스, KTB네트워크 등 11곳과 함께 영화 ‘범죄도시2’ 공동 제공사로 이름을 올렸다. 제공은 단순 투자를 의미한다. 주요 투자사보다 투자 규모는 작지만 영화 제작에 자금을 댔다는 뜻이다.
+    9일 통신업계에 따르면 미디어로그는 지난해 IBK기업은행, KC벤처스, KTB네트워크 등 11곳과 함께 영화 ‘범죄도시2’ 공동 제공사로 이름을 올렸다. 제공은 단순 투자를 의미한다. 주요 투자사보다 투자 규모는 작지만 영화 제작에 자금을 댔다는 뜻이다.
+    9일 통신업계에 따르면 미디어로그는 지난해 IBK기업은행, KC벤처스, KTB네트워크 등 11곳과 함께 영화 ‘범죄도시2’ 공동 제공사로 이름을 올렸다. 제공은 단순 투자를 의미한다. 주요 투자사보다 투자 규모는 작지만 영화 제작에 자금을 댔다는 뜻이다.
+    9일 통신업계에 따르면 미디어로그는 지난해 IBK기업은행, KC벤처스, KTB네트워크 등 11곳과 함께 영화 ‘범죄도시2’ 공동 제공사로 이름을 올렸다. 제공은 단순 투자를 의미한다. 주요 투자사보다 투자 규모는 작지만 영화 제작에 자금을 댔다는 뜻이다.
+  </div>
+</body>
+</html>

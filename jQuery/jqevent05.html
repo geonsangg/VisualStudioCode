@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체생성</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script> 
+       $(function () {
+        let stop;
+          $('h1').on('click',function() {
+            $(this).html(function(index, item) {
+              return item + '★';
+            });
+       });
+       stop2 = setTimeout(function () {
+          alert('안녕하세요');
+       },10000);
+
+        stop = setInterval(function () {
+          //trigger 이벤트 강제발생
+            $('h1').last().trigger('click');
+        },5000);
+
+        $('button').click(function () {
+          clearInterval(stop);
+          clearTimeout(stop2);
+        });
+      });
+    </script>
+</head>
+<body>
+  <button>중지</button>
+  <h1>홍길동-</h1>
+  <h1>김철수-</h1>
+</body>
+</html>

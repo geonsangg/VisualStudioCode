@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무한스크롤</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script> 
+       $(function () {
+        /*resize = 화면의 크기가 바뀌면 발생
+          $(window).resize(function () {
+            alert('창의 크기를 변경했습니다.');
+          });*/
+          //무한스크롤
+          for(let i=0; i<25; i++) {
+            $('<h1>무한 스크롤 체험</h1>').appendTo('body');
+          }
+          //window 창
+          $(window).scroll(function () {
+            let scrollHeight = $(this).scrollTop() + $(this).height();
+            //document 만든 문서의 높이
+            let documentHeight = $(document).height();
+            if(scrollHeight >= documentHeight-200) {
+                for(let i=0; i<25; i++) {
+                     $('<h1>무한 스크롤 체험</h1>').appendTo('body');
+                }
+            }
+          });
+      });
+    </script>
+</head>
+<body>
+    <h1>윈도우 이벤트</h1>
+</body>
+</html>

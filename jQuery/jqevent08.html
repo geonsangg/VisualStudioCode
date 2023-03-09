@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체생성</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script> 
+       $(function () {
+        let count = 1;
+         $('img').dblclick(function () {
+            if(count >= 4) {
+                count = 1;
+            $(this).attr('src','images/car'+count+'.jpg');
+            } else {
+            count++;
+            $(this).attr('src','images/car'+count+'.jpg');
+            }
+         });
+      });
+    </script>
+</head>
+<body>
+    <img src="images/car1.jpg" alt="car1">
+</body>
+</html>
