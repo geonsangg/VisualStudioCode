@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+       img , h2 {
+        position: relative;
+       }
+    </style>
+    <script> 
+    //animate(사용자 정의 애니메이션)
+    /*    1.$(선택자).animate(object);
+          2.$(선택자).animate(object,speed); 속도
+          3.$(선택자).animate(object,speed, callback); callback = 효과를 모두 완료한 후 실행할 함수를 지정
+          4.$(선택자).animate(object,speed, easing, callback); easing = 가속도 효과*/
+       $(function () {
+          $('img').click(function () {
+            $(this).animate({
+               left : 1000,
+               opacity : 0
+              },5000);
+          });
+          $('h2').click(function () {
+            $(this).animate({
+              left : 1000
+            },5000, function () {
+              $(this).html('공부하러 갑니다.');
+            });
+          });
+      });
+    </script>
+</head>
+<body>
+     <img src="images/car_green.jpg" alt=""><br>
+     <img src="images/car_purple.jpg" alt=""><br>
+     <img src="images/car_red.jpg" alt=""><br>
+     <h2>나는 무엇을 하러 갈까요?</h2>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        #person {
+          position: relative;
+        }
+         #person > img {
+          position: absolute;
+        }
+    </style>
+    <script> 
+       $(function () {
+        $('#person > img').eq(2).fadeOut(10000, function () {
+          $('#person >img').eq(1).fadeOut(10000)
+        });
+      });
+    </script>
+</head>
+<body>
+      <div id="person">
+        <img src="images/송해.jpg" alt="">
+        <img src="images/호동.jpg" alt="">
+        <img src="images/형돈.jpg" alt="">
+      </div>
+</body>
+</html>

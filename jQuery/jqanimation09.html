@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+      img {
+        width: 37px;
+        height: 21px;
+        cursor: pointer;
+      }
+    </style>
+    <script> 
+    $(function () {
+         $('img').click(function (event) {
+          /*let w=$(this).css('width');
+          let h=$(this).css('height');
+          $(this).animate({
+            width: parseInt(w)+37,
+            height: parseInt(h)+21
+          },500);
+         });*/
+         if(event.shiftKey) {
+          $(this).animate({
+          width: '-=37',  //width -= 37
+          height: '-=42'
+         },1000);
+         }else {
+          $(this).animate({
+          width: '+=37',  //width += 37
+          height: '+=42'
+         },1000);
+         }
+         
+        });
+      });
+    </script>
+</head>
+<body>
+    <img src="images/car_green.jpg" alt="">
+</body>
+</html>

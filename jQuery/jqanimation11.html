@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+      img {
+        width: 74px;
+        height: 42px;
+        cursor: pointer;
+        position: relative;
+      }
+    </style>
+    <script> 
+    $(function () {
+         $('img').click(function (event) {
+          $(this).animate({
+              left : 1500
+          },5000).animate({
+            left : 0
+          },5000);
+        });
+        //$(선택자).stop(); = 현재 수행중인 애니메이션을 중지 () 안쓰면 false false
+        //$(선택자).stop(clearQueue, gotoEnd)
+        //$(선택자).stop(true,false) <-- queue도 비워라
+        //$(선택자).stop(false,true) <-- 애니메이션 없이 그냥 수행
+        //$(선택자).stop(true,true) <-- 둘다수행
+        $('button').click(function () {
+          $('img').stop(false,true);
+        });
+      });
+    </script>
+</head>
+<body>
+  <button>중지</button><br>
+    <img src="images/car_green.jpg" alt="">
+</body>
+</html>

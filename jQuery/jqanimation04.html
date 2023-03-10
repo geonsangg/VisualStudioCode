@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+      .news {
+         display: none;
+      }
+    </style>
+    <script> 
+       $(function () {
+        $('.btnNews').click(function () {
+          //$('.news').fadeIn(2000);
+         //$('.news').fadeOut(2000);
+         $('.news').fadeToggle(2000);
+        });
+      });
+    </script>
+</head>
+<body>
+    <button class="btnNews">뉴스 토글</button>
+    <div class="news">
+        <h2>벼랑 끝 몰린 한국 야구</h2>
+        <p>이강철 감독이 이끄는 한국 야구대표팀은 9일 일본 도쿄돔에서 열린 2023 월드베이스볼클래식(WBC) B조 1라운드 1차전에서 호주에 7-8로 패했다. 한국은 1라운드 통과를 위해 일본을 반드시 이겨야 하는 어려운 상황에 몰렸다. 일본에 마저 패하면 탈락 확정이다.
+        </p>
+    </div>
+</body>
+</html>
