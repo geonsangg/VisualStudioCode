@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI 플러그인</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+       $(function () {
+         let words = ['able','apple','application','bear','bit','byte','car','cable'];
+         $('#eng').autocomplete({ //자동완성기능
+            source: words
+         });
+       });
+    </script>
+</head>
+<body>
+    <div>
+        <label for="eng">단어</label>
+        <input type="text" id="eng">
+    </div>
+</body>
+</html>

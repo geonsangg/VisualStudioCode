@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI 플러그인</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(function(){
+            $('img').draggable({
+                //페이지 넘어갈때 스크롤 막기
+                scroll:false,
+                //드래그 했다 놓으면 원래 위치로
+                revert:'invalid'
+            });
+            $('h1').draggable();
+        });
+    </script>
+</head>
+<body>
+    <img class="img1" src="images/car_green.jpg" alt="">
+    <h1>나도 움직여봐라</h1>
+</body>
+</html>

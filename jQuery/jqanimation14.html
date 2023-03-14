@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체생성</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        img{
+            width: 100px;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .finishLine{
+            position: absolute;
+            top: 30px;
+            left: 1100px;
+            width: 2px;
+            height: 400px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        $(function(){
+            let setVal;
+            let count=0;
+            $('#start').click(function(){
+                gameStart();
+            });
+            $('#set').click(function(){
+                $('img').css('left',0);
+                $('.topName').html('');
+            })
+            function gameStart(){
+                setVal=setInterval(function(){
+                    count++;
+                    for(let i=0;i<5;i++){
+                        let distance=Math.floor(Math.random()*30)+1;
+                        if(count>15){
+                            if(i==3){
+                            distance+=2;
+                            }
+                        }
+                        $('img').eq(i).animate({
+                            left:'+='+distance
+                        },300);
+                        let goalLine=$('img').eq(i).css('left');
+                        if(parseInt(goalLine)>=1000){
+                            clearInterval(setVal);
+                            $('.topName').html('→'+(i+1)+'번 표범 우승');
+                        }
+                    }
+                },500);
+            };
+        });
+    </script>
+</head>
+<body>
+    <p>
+        <button id="start">출발</button> ------ <button id="set">제자리로</button>
+        <span class="topName"></span>
+    </p>
+    <img src="images/표범.gif" alt="" title="1번 선수"><br>
+    <img src="images/표범.gif" alt="" title="2번 선수"><br>
+    <img src="images/표범.gif" alt="" title="3번 선수"><br>
+    <img src="images/표범.gif" alt="" title="4번 선수"><br>
+    <img src="images/표범.gif" alt="" title="5번 선수"><br>
+    <div class="finishLine"></div>
+</body>
+</html>

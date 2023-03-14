@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        img{
+            position: relative;
+        }
+    </style>
+    <script>
+        $(function(){
+            let posLeft,posTop;
+            let sw=false;
+            $('.img1').on({
+                mousedown:function(event){
+                    sw=true;
+                    posLeft=event.offsetX;
+                    posTop=event.offsetY;
+                    //기본 이벤트 제거
+                    event.preventDefault();
+                },
+                mousemove:function(event){
+                    if(sw==true){
+                        let x=event.pageX-posLeft;
+                        let y=event.pageY-posTop;
+                        $(this).css({
+                            left:x,
+                            top:y
+                        });
+                    }
+                    event.preventDefault();
+                },
+                mouseup:function(event){
+                    sw=false;
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <img class="img1" src="images/car_green.jpg" alt="">
+</body>
+</html>

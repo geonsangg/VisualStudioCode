@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI 플러그인</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        #tabs {
+            width: 500px;
+        }
+    </style>
+    <script>
+       $(function () {
+        $('#tabs').tabs({
+            event : 'mouseover'
+        });
+       });
+    </script>
+</head>
+<body>
+    <div id="tabs">
+        <ul>
+            <li><a href="#news-1">경제뉴스</a></li>
+            <li><a href="#news-2">사회뉴스</a></li>
+            <li><a href="#news-3">스포츠뉴스</a></li>
+        </ul>
+        <div id="news-1">
+            <p>이스타항공은 김포~제주 노선에 대한 항공권 판매를 시작한다고 밝혔다. 3월 13일 오후 2시부터 공식 홈페이지, 모바일 앱 등을 통해 항공권 예매 서비스를 이용할 수 있다. 3월 26일~10월 28일까지의 김포~제주 노선 항공권을 예매가 가능하다.</p>
+            <p>이스타항공은 3월 26일부터 28일까지는 김포-제주 노선을 하루 10회 왕복 운항하고 29일부터는 매일 12회 왕복 운항한다. 자세한 운항 일정은 홈페이지를 통해 확인할 수 있다.</p>
+        </div>
+        <div id="news-2">
+            <p>울산지역 한 시장에서 노점상을 단속하는 과정에서 단속원이 60대 여성을 내동댕이 치는 영상이 공개돼 공분을 사고 있다. 노점 상인은 칠순을 앞둔 할머니로, 바닥으로 넘어지면서 전치 10주 부상을 당했다.
+            </p>
+            <p>그는 "지난 8일 경남 양산에 거주 중인 친구 모친(68)은 직접 재배한 농산물을 울산 남구 신정시장에서 노점을 펼쳐 판매하고 있었다"며 "그러던 중 남구청 건설과 공무원의 노점상 단속을 받게 됐다"며 영상 속 상황을 설명했다.</p>
+        </div>
+        <div id="news-3">
+            <p>2005년 청소년야구대표팀으로 첫 국대 유니폼을 입은 것을 시작으로 2008년 베이징올림픽부터 2023 WBC까지 성인 무대에선 총 7개 국제대회에서 활약했다. 2008 베이징 올림픽 금메달, 2009 WBC 준우승, 2014 인천아시안게임 금메달, 2015 프리미어 12 우승, 2019 프리미어12 준우승 등 한국야구의 영광의 순간의 주역으로 오랜 기간 활약했다.</p>
+        </div>
+    </div>
+</body>
+</html>

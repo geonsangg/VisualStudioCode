@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI 플러그인</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        .reverse{
+            color: #fff;
+            background-color: black;
+            border: 1px solid red;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('div').hover(function(){
+                //제이쿼리 ui가 있으면 속도를 줄 수 있음
+                $(this).addClass('reverse',1000);
+            },function(){
+                $(this).removeClass('reverse');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>자바스크립트</h1>
+        <p>정적인 홈페이지를 동적으로 만들어주는 웹언어</p>
+    </div>
+    <div>
+        <h1>제이쿼리</h1>
+        <p>자바스크립트로 만들어진 라이브러리</p>
+    </div>
+    <div>
+        <h1>제이쿼리 실무</h1>
+        <p>제이쿼리를 활용해서 웹문서를 동적으로 제어하는 기술</p>
+    </div>
+</body>
+</html>

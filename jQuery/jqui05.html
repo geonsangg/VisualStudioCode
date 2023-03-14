@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI 플러그인</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        #popup{
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            z-index: 100;
+            display: none;
+        }
+        #popup>.title{
+            padding: 5px;
+            border: 1px solid #999;
+            background-color: #ccc;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        #popup>.popup_close{
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            top: 5px;
+            right: 5px;
+            border: 1px solid #000;
+            text-decoration: none;
+            color: #000;
+            text-align: center;
+        }
+    </style>
+    <script>
+        $(function(){
+            setTimeout(function(){
+                popupOpen();
+            },2000);
+            $('.title').on({
+                mousedown:function(){
+                    $('#popup').draggable({
+                        cursor:'move',
+                        helper:'origin'
+                    });
+                },
+                mousemove:function(){
+                        
+                },
+                mouseup:function(){
+                    $('#popup').draggable({
+                        cursor:'not-allowed',
+                        helper:'clone'
+                    });
+                }
+            })
+        });
+        //팝업창 오픈 함수
+        function popupOpen(){
+            $('#popup').css({
+                left:300,
+                top:100
+            }).show('blind',500);
+        };
+        function popupClose(){
+            $('#popup').hide('explode',500);
+        };
+    </script>
+</head>
+<body>
+    <h1>여기는 메인화면</h1>
+    <p>여기는 메인 페이지 내용입니다.</p>
+    <img src="images/Koala.jpg" alt="">
+    <!--팝업창(광고)영역-->
+    <div id="popup">
+        <div class="title">공지사항</div>
+        <a href="#" class="popup_close" onclick='popupClose();'>X</a>
+        <div class="content">
+            <p>제이쿼리 UI 플러그인</p>
+            <p>제이쿼리 실무응용</p>
+            <p>개인 홈페이지에 적용</p>
+        </div>
+    </div>
+</body>
+</html>

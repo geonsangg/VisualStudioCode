@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI 플러그인</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        img{
+            display: none;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('button').click(function(){
+                $('img').show('explode',2000);
+            });
+            $('img').click(function(){
+                $(this).hide('scale',2000);
+            });
+            $('h1').tooltip({
+                show : 'slideDown',
+                hide : 'explode'
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 title="자바스크립트 라이브러리">제이쿼리</h1>
+    <button>이미지보기</button>
+    <img src="images/car_green.jpg" alt="">
+</body>
+</html>

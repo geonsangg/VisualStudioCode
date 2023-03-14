@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI 플러그인</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        .item {
+            margin: 3px;
+            padding: 5px;
+        }
+        .item > img {
+            width: 100px;
+            height: 100px;
+        }
+        #wrap {
+            overflow: hidden;
+        }
+        #wrap > div {
+            float: left;
+        }
+        #dock {
+            position: fixed;
+            bottom: 0;
+            min-height: 120px;
+            width: 100%;
+            z-index: 1;
+        }
+        #dock > div {
+            float: right;
+        }
+    </style>
+    <script>
+       $(function () {
+            for(let i=0; i<21; i++) {
+                let icon = '';
+                icon += '<div class="ui-widget-content ui-corner-all item">';
+                icon += '<img src="images/' +  i + '.png">';
+                icon += '</div>';
+                $('#wrap').append(icon);
+                
+            }
+            $('#wrap>div').draggable({
+                scroll : false,
+                helper : 'clone',
+                revert : 'invalid',
+                zIndex : 100
+         });
+         $('#dock').droppable({
+            accept : '#wrap>div',
+            drop : function (event, ui) {
+                $(ui.draggable).fadeOut('fast', function () {
+                    $(this).appendTo('#dock').fadeIn('fast');
+                });
+            }
+        });
+        $('#wrap').droppable({
+            accept : '#dock>div',
+            drop : function (event, ui) {
+                $(ui.draggable).fadeOut('fast', function () {
+                    $(this).appendTo('#wrap').fadeIn('fast');
+                });
+            }
+        });
+       });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+
+    </div>
+    <div id="dock" class="ui-state-error">
+
+    </div>
+</body>
+</html>
