@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        div {
+          width: 120px;
+          height: 150px;
+          border: 1px solid;
+          margin: 0 auto;
+          overflow: hidden;
+          position: relative;
+          background: cyan;
+        }
+        div > img {
+          width: 120px;
+          height: 150px;
+          position: relative;
+        }
+        div > h1 {
+          width: 100%;
+          text-align: center;
+          position: absolute;
+          line-height: 100px;
+        }
+    </style>
+    <script> 
+       $(function () {
+          let pos = 0;
+          let imgNames = ['코알라','사막','등대','해파리','펭귄'];
+          let imgs = ['Koala','Desert','Lighthouse','Jellyfish','Penguins'];
+        $('div > img').click(function () {
+          pos++;
+          if (pos == 5) {
+              pos=0;
+          }
+          $(this).animate({
+            left : -120
+          },'slow',function () {
+            $(this).css('left',120).attr('src','images/'+imgs[pos]+'.jpg');
+            $('h1').html(imgNames[pos]);
+            $(this).animate({
+              left : 0
+            },'slow');
+          });
+        });
+      });
+    </script>
+</head>
+<body>
+      <div>
+        <h1>코알라</h1>
+        <img src="images/Koala.jpg" alt="Koala">
+      </div>
+</body>
+</html>

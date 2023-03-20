@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>칼라박스(라이트박스)</title>
+    <link rel="stylesheet" href="css/colorbox.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery.colorbox.js"></script>
+    <style>
+     
+    </style>
+    <script> 
+    $(function () {
+        $('a[rel="colorbox"]').colorbox({
+          transition : 'fade',
+          opacity : 0.3, //opacity로 colorbox가 떴을때 배경 화면 색투명도를 조절할 수 있다.
+          //onOpen = color박스가 열리기 전에
+          onOpen : function () {
+            alert('3월에 출시된 신제품입니다.');
+          },
+          //onClosed = 닫을때
+          onClosed : function () {
+            alert('일시적으로 한정수량만 판매합니다.');
+          }
+        });
+      });
+    </script>
+</head>
+<body>
+    <h1>칼라박스 플러그인</h1>
+    <a rel="colorbox" title="Chrysanthemum" href="images/Chrysanthemum.jpg">Chrysanthemum</a>
+    <a rel="colorbox" title="Desert" href="images/Desert.jpg">Desert</a>
+    <a rel="colorbox" title="Hydrangeas" href="images/Hydrangeas.jpg">Hydrangeas</a>
+    <a rel="colorbox" title="Jellyfish" href="images/Jellyfish.jpg">Jellyfish</a>
+    <a rel="colorbox" title="Koala" href="images/Koala.jpg">Koala</a>
+    <a rel="colorbox" title="Lighthouse" href="images/Lighthouse.jpg">Lighthouse</a>
+    <a rel="colorbox" title="Penguins" href="images/Penguins.jpg">Penguins</a>
+    <a rel="colorbox" title="Tulips" href="images/Tulips.jpg">Tulips</a>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>칼라박스(라이트박스)</title>
+    <link rel="stylesheet" href="css/colorbox.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery.colorbox.js"></script>
+    <style>
+     
+    </style>
+    <script> 
+    $(function () {
+       $('#colorbox').colorbox({
+          inline : true,
+          width : 400
+       }).click(function () {
+        setTimeout(function () {
+          $.colorbox.close();
+        },3000);
+       }).trigger('click');
+      });
+    </script>
+</head>
+<body>
+    <a id="colorbox" href="#popup">알림창보기</a>
+    <!-- 알림창 영역 -->
+    <div id="popup_area" style="display: none">
+        <div id="popup">
+            <h2>공지사항</h2>
+            <p>자바스크립트 수업 종료</p>
+            <p>반응형 실무 페이지, 적응형 페이지</p>
+            <p>백엔드 프로그램 개발 시작 => 데이터 베이스</p>
+            <p>※이 공지사항은 3초 후에 자동으로 사라집니다.</p>
+        </div>
+    </div>
+</body>
+</html>
