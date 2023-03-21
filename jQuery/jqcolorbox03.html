@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>칼라박스(라이트박스)</title>
+    <link rel="stylesheet" href="css/colorbox.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery.colorbox.js"></script>
+    <script> 
+    $(function () {
+        $('#search-form').submit(function (event) {
+            // Ajax를 수행
+            let url = 'http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?';
+            $.getJSON(url, $(this).serialize(), function (data) {
+                $('#images').empty();
+                $.each(data.items , function (index, item) {
+                    let image= $('<img />').attr({
+                        src : item.media.m
+                    });
+                    $('<a></a>').attr({
+                        class : 'flickr-image',
+                        href : item.media.m,
+                        rel : 'colorbox'
+                    }).html(image).appendTo('#images');
+                });
+                $('a.flickr-image').colorbox();
+            });
+            return false; //이벤트 전달과 기본 이벤트 제거
+        });
+      });
+    </script>
+</head>
+<body>
+    <h1>컬러박스를 활용한 플리커 이미지 앨범</h1>
+    <form id="search-form">
+        <input type="text" name="tags">
+        <input type="hidden" name="format" value="json">
+        <input type="submit" value="검색">
+    </form>
+    <div id="images">
+
+    </div>
+</body>
+</html>

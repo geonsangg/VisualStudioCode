@@ -10,12 +10,19 @@
      
     </style>
     <script> 
-    $(function () {
-       
+    $(function () { //(data) = product.json 안에 값들
+        $.getJSON('product.json',function (data) {
+          $.each(data, function (index, item) {
+            $('#list').append('<p>' + item.name + ' ☞ ' + item.price + '</p>');
+          });
+        });
       });
     </script>
 </head>
 <body>
-  
+  <h2>편의점 물품리스트</h2>
+  <div id="list">
+
+  </div>
 </body>
 </html>

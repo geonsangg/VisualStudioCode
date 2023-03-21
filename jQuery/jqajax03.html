@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <link rel="stylesheet" href="css/colorbox.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+     
+    </style>
+    <script> 
+    $(function () { 
+        $.ajax({
+          url: 'product.xml',  
+          //url 연결에 성공하면 data(product.xml값)에서 product태그를 찾아서 각각 name변수에 this(찾은 product태그)에서 name태그를 찾아서 태그 사이 값을 넣는다.
+          success : function (data) {
+            $(data).find('product').each(function () {
+               let name = $(this).find('name').html();
+               let price = $(this).find('price').html();
+               $('<p></p>').html(name + ' ☞ ' + price).appendTo('#list');
+            });
+          }
+        })
+      });
+    </script>
+</head>
+<body>
+  <h2>편의점 물품리스트</h2>
+  <div id="list">
+
+  </div>
+</body>
+</html>

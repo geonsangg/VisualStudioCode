@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product>
+        <name>콜라</name>
+        <price>1800</price>
+    </product>
+    <product>
+        <name>혜자도시락</name>
+        <price>4500</price>
+    </product>
+    <product>
+        <name>우산</name>
+        <price>8000</price>
+    </product>
+</products>

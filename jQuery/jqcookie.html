@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠키 플러그인 활용</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <style>
+        #notice_wrap {
+          position: absolute;
+          left: 200px;
+          top: 100px;
+          z-index: 100;
+          border: 1px solid #ccc;
+        }
+    </style>
+    <script> 
+       $(function () {
+          if($.cookie("popup") == "none") {
+            $('#notice_wrap').hide();
+          }
+          let expChk = $('#expiresChk');
+          $('.closeBtn').on('click',function() {
+            if(expChk.is(':checked')) {
+              $.cookie("popup","none",{
+                expires : 3,
+                path : "/"
+              });
+            }
+            $('#notice_wrap').hide();
+          });
+      });
+    </script>
+</head>
+<body>
+    <h1>여기는 메인</h1>
+    <p>여기는 메인 페이지 내용</p>
+    <div id="notice_wrap">
+        <h2>공지사항</h2>
+        <p>UI구현 자바스크립트 기능도 포함</p>
+        <p>월요일부터 대중교통에서 마스크 해제</p>
+        <img src="images/car_green.jpg" alt="car">
+        <p class="closeWrap">
+          <input type="checkbox" name="expiresChk" id="expiresChk">
+          <label for="expiresChk">3일동안 열지않기</label>
+          <button class="closeBtn">닫기</button>
+        </p>
+    </div>
+</body>
+</html>
