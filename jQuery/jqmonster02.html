@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>몬스터만들기</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+      body {
+        background-color: #000;
+      }
+      .lightning {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+      }
+      #top {
+        position: relative;
+        left: 0;
+        top: 0;
+        height: 80px;
+        z-index: 10;
+      }
+      .text_top {
+        position: absolute;
+        left: 200px;
+        top: 10px;
+      }
+      #top > p {
+        position: absolute;
+        left: 140px;
+        top: 30px;
+        color: rgb(49, 180, 75);
+      }
+      .random_top {
+        position: absolute;
+        left: 580px;
+        top: 20px;
+        cursor: pointer;
+      }
+      #container {
+        position: relative;
+        left: 0;
+        top: 0;
+        height: 700px;
+      }
+      .frame {
+        position: absolute;
+        left: 100px;
+        top: 0;
+        width: 546px;
+        height: 629px;
+        background: url(images/frame.png);
+      }
+      .pic_box {
+        position: absolute;
+        left: 91px;
+        top: 84px;
+        width: 367px;
+        height: 460px;
+        overflow: hidden;
+      }
+      .face {
+        position: relative;
+        left: 0;
+        top: 0;
+      }
+      .head {
+        height: 172px;
+      }
+      .eyes {
+        height: 79px;
+      }
+      .nose {
+        height: 86px;
+      }
+      .mouth {
+        height: 123px;
+      }
+    </style>
+    <script> 
+    $(function () { 
+          let clix=[0, 0, 0, 0];
+          let index;
+          lightning();
+          // 몬스터 이미지 슬라이드 호출
+          $('.face').click(function() {
+            index = $(this).index();
+            monsterMove(index, this); //.face = 4개 / 머리를 클릭하면 this = 머리를 받는다.
+          });
+          //랜덤 클릭
+          $('.random_top').click(function () {
+            $('.face').each(function (index) {
+              clix[index] = Math.round(Math.random()*9);
+              monsterMove(index, this);
+            });
+          });
+          // 몬스터 이미지 슬라이드 구현
+          function monsterMove(index, obj){ // obj = 위에서 클릭된 것의 객체정보를 담는다.
+            clix[index]++;
+            if(clix[index] < 10) {
+              $(obj).animate ({
+                left : -(clix[index]*367)
+              },500); 
+            } else {
+              $(obj).animate({
+                left : 0
+              },500);
+              clix[index] = 0;
+            }
+          };
+          //번개 구현
+          setInterval(function () {
+            $('.lightning2').fadeIn(250).fadeOut(250);
+          },5000);
+          setInterval(function () {
+            $('.lightning3').fadeIn(250).fadeOut(250);
+          },7000);
+          //번개치는 함수
+          function lightning() {
+            $('.lightning1').fadeIn(250).fadeOut(250);
+            setTimeout(function () {
+              lightning();  //재귀호출 : 나 자신을 호출
+            },4000);
+          }
+      });
+    </script>
+</head>
+<body>
+    <img class="lightning lightning1" src="images/lightning-01.jpg" alt="lightning-01">
+    <img class="lightning lightning2" src="images/lightning-02.jpg" alt="lightning-02">
+    <img class="lightning lightning3" src="images/lightning-03.jpg" alt="lightning-03">
+    <header id="top">
+        <img class="text_top" src="images/Monster_Mashup.png" alt="Monster_Mashup">
+        <p>Make your own monster face by clicking on the picture.</p>
+        <img class="random_top" src="images/monster.png" alt="monster" title="클릭하면 랜덤하게 몬스터가 만들어집니다.">
+    </header>
+    <div id="container">
+      <div class="frame">
+        <div class="pic_box">
+          <div class="head face">
+            <img src="images/headsstrip.jpg" alt="headsstrip">
+          </div>
+          <div class="eyes face">
+            <img src="images/eyesstrip.jpg" alt="eyesstrip">
+          </div>
+          <div class="nose face">
+            <img src="images/nosesstrip.jpg" alt="nosesstrip">
+          </div>
+          <div class="mouth face">
+            <img src="images/mouthsstrip.jpg" alt="mouthsstrip">
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

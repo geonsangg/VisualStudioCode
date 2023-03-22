@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+      $(function () {
+        let sum = plus;
+          $('#call1').click(function () {
+            let result = sum(10,20) ;
+            alert('두 수의 합 = ' + result);
+          });
+          $('#call2').click(function () {
+            bye();
+          });
+      });
+    
+      function hello(name) {
+        alert(name + '님 안녕하세요');
+      }
+      function plus(a,b) {
+        hop = a+b;
+        return hop;
+      }
+      function bye() {
+        alert('잘 가세요');
+      }
+    </script>
+</head>
+<body>
+    <button id="call1">합 구하기</button>
+    <button id="call2">인사</button>
+    <h2 onclick="hello('홍길동');">함수호출</h2>
+</body>
+</html>

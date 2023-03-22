@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+       let arr1 = [10,20,30];
+       arr1.push(40);
+       console.log(arr1);
+       let arr2 = [10,20,30];
+       let arr3 = arr2.concat(40);
+       console.log(arr2);
+       console.log(arr3);
+       let arr4 = [10,20,30];
+       let arr5 = Array.from(arr4);  //Array.from - 배열 복제
+       arr5.push(40);
+       console.log(arr5);
+       $(function () {
+        $('.ko').wrap('<div></div>'); //wrap  (.ko)를 (div)로 감싸겠다.
+       });
+    </script>
+</head>
+<body>
+   <img class="ko" src="images/Koala.jpg" alt="Koala">
+</body>
+</html>

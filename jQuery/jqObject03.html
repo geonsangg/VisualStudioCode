@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+        let area = {
+          width : 500,
+          height : 700
+        };
+        let exArea = {
+          width : 1000,
+          height : 1200
+        };
+        //extend(A,B) A와B의 속성이름 이같으면 A의 속성값이 B의 속성값으로 바뀐다.
+        $.extend(area, exArea);
+        console.log(area);
+        alert(area.width);
+    </script>
+</head>
+<body>
+   
+</body>
+</html>
