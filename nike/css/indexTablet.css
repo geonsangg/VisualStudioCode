@@ -10,6 +10,8 @@
         z-index: 999;
         overflow-x: hidden;
         overflow-y: scroll;
+        /* IE, Edge에서 스크롤바 안 보이게 */
+        -ms-overflow-style: none;
         /* firefox에서 스크롤바 안 보이게 */
         scrollbar-width: none;
         display: none;
@@ -189,9 +191,99 @@
         margin: 20px 4px 0 4px;
         border-radius: 18.5px;
     }
+    /* 이번주 스타일링 */
+    .content_img {
+        display: flex;
+    }
+    .content_img > .main_img {
+        margin-right: 16px;
+    }
+    .content_title {
+        font-size: 1.375em;
+        margin-bottom: 18px;
+    }
+    /* Trending Now  */
+    .trend_img:first-child {
+        margin-right: 16px;
+    }
+    .trend_text {
+        bottom: 24px;
+        left: 24px;
+    }
+    .c_white {
+        margin-bottom: 8px;
+    }
+    .b_white {
+        margin: 0;
+    }
+    /* swiper 슬라이드  */
+    .Featured_slide .swiper-slide {
+        width: 38%;
+    }
+    .featured_title {
+        font-size: 1.125em;
+        margin-top: 16px;
+    }
+    .featured_text {
+        font-size: 0.9375em;
+        line-height: 19px;
+    }
+    /* 푸터(footer) */
+    .f_top, .f_bottom {
+        width: 580px;
+        margin: 0 auto;
+        padding: 40px 0;
+        font-size: 0.6875em;
+    }   
+    .f_info {
+        flex-direction: column;
+    }
+    .f_bottom ul {
+        margin-bottom: 24px;
+    }
+    .f_bottom p {
+        margin-bottom: 24px;
+    }
 }
 
 /* 미디어쿼리 581px 이하에서 적용(태블릿용) - 세로로 세웠을 때*/
 @media screen and (max-width:581px) {
-    
+    .f_mobile {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-size: 0.8125em;
+    }
+    .f_mobile li {
+        padding: 0 6%;
+    }
+    .f_menu {
+        display: none;
+    }
+    .f_top, .f_bottom {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 16px;
+        text-align: center;
+    }
+    .f_bottom {
+        padding: 32px 16px;
+    }
+    .f_bottom ul {
+        justify-content: center;
+    }
+    .f_bottom ul li a {
+        color: #aaa;
+    }
+    .f_info > p br:nth-child(1),
+    .f_info > p br:nth-child(3),
+    .f_info > p br:nth-child(6) {
+        display: block;
+    }
+    .inipay p:last-child {
+        justify-content: center;
+    }
+    .inipay p:last-child img {
+        display: none;
+    }
 }

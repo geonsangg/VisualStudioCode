@@ -111,12 +111,12 @@
 .swiper_slide {
     position: relative;
 }
-.Featured_slide .swiper_slide > a {
+.Featured_slide .swiper-slide > a {
     display: block;
     width: 100%;
     text-align: left;
 }
-.Featured_slide .swiper_slide > a > img {
+.Featured_slide .swiper-slide > a > img {
     width: 100%;
 }
 .featured_title {
